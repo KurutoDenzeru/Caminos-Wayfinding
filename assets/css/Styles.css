@@ -1,0 +1,14 @@
+#inpt {
+  background: var(--bs-gray-400);
+}
+
+@media (min-width: 992px) {
+  #back {
+    transform: translateX(15px);
+  }
+}
+
+#btn {
+  margin-top: 5px;
+}
+
