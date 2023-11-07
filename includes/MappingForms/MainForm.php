@@ -36,7 +36,11 @@
                 <?php include ('logout.php'); ?>       
 
                 <div class="text-center py-8">
-                    <img src="../../assets/img/caminoslogo.png" class="mx-auto w-48 md:w-24 sm:w-28">                                  
+                    <!-- <img src="../../assets/img/caminoslogo.png" class="mx-auto w-48 md:w-24 sm:w-28"> -->
+
+                    <h2 class="text-start lg:text-start font-bold text-3xl sm:text-4xl leading-none">
+				              Welcome, Student.
+			              </h2>                    
                 </div>
 
                 <div class="relative mt-6" data-toggle="tooltip" data-placement="top" title="e.g. Building 1 Room 1 / B1 R1">
