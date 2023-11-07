@@ -6,6 +6,9 @@
 
 ?>
 
+<title>ABES - Login</title>
+<link rel="icon" type="text/css" href="../assets/img/favicon.png">
+
 <body class="bg-cover bg-fixed bg-center bg-no-repeat" style="background: url(../assets/img/ABES.jpg)">
 
 <section class="h-screen">

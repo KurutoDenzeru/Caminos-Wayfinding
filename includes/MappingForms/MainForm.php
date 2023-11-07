@@ -7,6 +7,7 @@
 
 <head>
     <title>ABES - Mapping System</title>
+    <link rel="icon" type="text/css" href="../../assets/img/favicon.png">
 </head>
 
     <!-- Canteen -->
@@ -32,11 +33,7 @@
             <div class="px-14 py-6 shadow-2xl md:px-0 lg:w-4/12">
               <div class="md:mx-6 md:p-14">
 
-                <?php 
-
-                    include ('logout.php');                    
-                
-                ?>       
+                <?php include ('logout.php'); ?>       
 
                 <div class="text-center py-8">
                     <img src="../../assets/img/caminoslogo.png" class="mx-auto w-48 md:w-24 sm:w-28">                                  
@@ -53,17 +50,20 @@
                             </div>
                             <input type="text" id="searchInput" onkeyup="search()" class="block w-full p-2 pl-10 text-sm text-gray-900 border-1 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Search" required>
                         </div>
-                    </form>
+                    </form>                  
 
-                    <!-- <input type="text" class="form-control-sm" id="searchInput" onkeyup="search()"
-                        style="width: 100%;margin-bottom: 10px;border-radius: 10px;background: rgb(242,242,242);border: 1px solid #D6D6D6;" 
-                        placeholder="Where to go?"> -->
+                  <!-- Buttons -->
+                  <div class="text-center pt-4 flex justify-evenly">
+                    <button type="button" onclick="removeRestroomQueryParam()" class="text-gray-900 bg-white w-1/2 border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+                      Canteen
+                    </button>
+                    
+                    <button type="button" onclick="addRestroomQueryParam()" class="text-gray-900 bg-white w-1/2  border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+                      Restroom(s)
+                    </button>
+                  </div>                    
 
-                    <?php 
-                
-                        include ('Howtouse.php');
-
-                    ?>
+                    <?php include ('Howtouse.php'); ?>
 
                   </div>
 
@@ -72,15 +72,11 @@
 
             <!-- Right column container with background and description-->
             <div class="flex p-8 items-center rounded-b-2xl lg:w-8/12 lg:rounded-r-2xl lg:rounded-bl-none bg-fixed bg-cover bg-center">
-              <div class="flex justify-self-center justify-center">                
+              <div class="flex mx-auto">                
 
                 <!-- Wayfinding System -->
-                    <!-- <img id='imageContainer' src="../../mapping/chuchumap.jpg"
-                        class="rounded-lg image-fluid w-3/5 shadow-lg"> -->
-                <img id='myCanvas' src="../../mapping/chuchumap.jpg"
-                        class="rounded-lg image-fluid w-3/5 shadow-lg">                                        
-                    <!-- <canvas id="myCanvas" class="rounded-lg image-fluid w-3/5 shadow-lg object-cover"></canvas> -->
-
+                    <img id='myCanvas' src="../../mapping/chuchumap.jpg"
+                        class="rounded-lg image-fluid w-auto shadow-lg">
               </div>
             </div>
 
@@ -91,17 +87,17 @@
   </div>
 </section>
 
-<!-- Fetch Script -->
+<!-- Fetching Script -->
 <script>
       const img = new Image
-      img.src = (window.location.href.includes('?restroom')) ? "mapping/Restroom.jpg" : "../../mapping/chuchumap.jpg"
+      img.src = (window.location.href.includes('?restroom')) ? "mapping/Restroom.jpg" : "mapping/chuchumap.jpg"
 
       img.onload = () => {
         let element = document.getElementById('myCanvas')
         ctx = element.getContext('2d')
-        element.width = 1080
-        element.height = 1080
-        ctx.drawImage(img, 0, 0, 1080, 1080)
+        element.width = 512
+        element.height = 512
+        ctx.drawImage(img, 0, 0, 512, 512)
       }
 
       function addRestroomQueryParam() {
