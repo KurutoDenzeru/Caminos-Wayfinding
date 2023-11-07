@@ -13,10 +13,10 @@ if ($searchValue == 'B1 R1' || $searchValue == 'Building 1 Room 1') {
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/newdefault.jpg" class="img-fluid py-2" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -39,6 +39,7 @@ if ($searchValue == 'B1 R1' || $searchValue == 'Building 1 Room 1') {
     </div>
 
     '
+
   ;
 } 
 
@@ -54,7 +55,7 @@ elseif ($searchValue == 'B1 R2' || $searchValue == 'Building 1 Room 2') {
       <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          17 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -94,7 +95,7 @@ elseif ($searchValue == 'B1 R3' || $searchValue == 'Building 1 Room 3') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -137,7 +138,7 @@ elseif ($searchValue == 'B1 R4' || $searchValue == 'Building 1 Room 4') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -177,7 +178,7 @@ elseif ($searchValue == 'B1 R5' || $searchValue == 'Building 1 Room 5') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -217,7 +218,7 @@ elseif ($searchValue == 'B1 R6' || $searchValue == 'Building 1 Room 6') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -257,7 +258,7 @@ elseif ($searchValue == 'B1 R7' || $searchValue == 'Building 1 Room 7') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -296,7 +297,7 @@ elseif ($searchValue == 'B1 R8' || $searchValue == 'Building 1 Room 8') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -335,7 +336,7 @@ elseif ($searchValue == 'B1 R9' || $searchValue == 'Building 1 Room 9') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -374,7 +375,7 @@ elseif ($searchValue == 'B1 R10' || $searchValue == 'Building 1 Room 10') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -413,7 +414,7 @@ elseif ($searchValue == 'B1 R11' || $searchValue == 'Building 1 Room 11') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -453,7 +454,7 @@ elseif ($searchValue == 'B1 R12' || $searchValue == 'Building 1 Room 12') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -492,7 +493,7 @@ elseif ($searchValue == 'B1 CR1' || $searchValue == 'Building 1 CR1') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -520,7 +521,7 @@ elseif ($searchValue == 'B1 CR2' || $searchValue == 'Building 1 CR2') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -548,7 +549,7 @@ elseif ($searchValue == 'B1 CR3' || $searchValue == 'Building 1 CR3') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -576,7 +577,7 @@ elseif ($searchValue == 'B1 CR4' || $searchValue == 'Building 1 CR4') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -604,7 +605,7 @@ elseif ($searchValue == 'B1 CR5' || $searchValue == 'Building 1 CR5') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -632,7 +633,7 @@ elseif ($searchValue == 'B1 CR6' || $searchValue == 'Building 1 CR6') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -660,7 +661,7 @@ elseif ($searchValue == 'B1 CR7' || $searchValue == 'Building 1 CR7') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -688,7 +689,7 @@ elseif ($searchValue == 'B1 CR8' || $searchValue == 'Building 1 CR8') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -716,7 +717,7 @@ elseif ($searchValue == 'B2 R1' || $searchValue == 'Building 2 Room 1') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -755,7 +756,7 @@ elseif ($searchValue == 'B2 R2' || $searchValue == 'Building 2 Room 2') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -795,19 +796,21 @@ elseif ($searchValue == 'B2 R3' || $searchValue == 'Building 2 Room 3') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
       <p style="font-size: 15px"> 
         Estimated Time of Arrival
       </p>
-
+      <script src="astar.js"></script>
+      <script>
        drawMap(
         0,
         { x: 21, y: 42 - 1 },
         { x: 8, y: 21 - 8 }
       )
+      </script>
 
     </div>
 
@@ -829,7 +832,7 @@ elseif ($searchValue == 'B2 R4' || $searchValue == 'Building 2 Room 4') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -870,7 +873,7 @@ elseif ($searchValue == 'B2 R5' || $searchValue == 'Building 2 Room 5') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -910,7 +913,7 @@ elseif ($searchValue == 'B2 R6' || $searchValue == 'Building 2 Room 6') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -950,7 +953,7 @@ elseif ($searchValue == 'B2 R7' || $searchValue == 'Building 2 Room 7') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -990,7 +993,7 @@ elseif ($searchValue == 'B2 R8' || $searchValue == 'Building 2 Room 8') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1030,7 +1033,7 @@ elseif ($searchValue == 'B2 R9' || $searchValue == 'Building 2 Room 9') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1070,7 +1073,7 @@ elseif ($searchValue == 'B2 R10' || $searchValue == 'Building 2 Room 10') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1110,7 +1113,7 @@ elseif ($searchValue == 'B2 R11' || $searchValue == 'Building 2 Room 11') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1150,7 +1153,7 @@ elseif ($searchValue == 'B2 R12' || $searchValue == 'Building 2 Room 12') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1190,7 +1193,7 @@ elseif ($searchValue == 'B2 CR1' || $searchValue == 'Building 2 CR1') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1231,7 +1234,7 @@ elseif ($searchValue == 'B2 CR2' || $searchValue == 'Building 2 CR2') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1259,7 +1262,7 @@ elseif ($searchValue == 'B2 CR3' || $searchValue == 'Building 2 CR3') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1287,7 +1290,7 @@ elseif ($searchValue == 'B2 CR4' || $searchValue == 'Building 2 CR4') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1315,7 +1318,7 @@ elseif ($searchValue == 'B2 CR5' || $searchValue == 'Building 2 CR5') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1343,7 +1346,7 @@ elseif ($searchValue == 'B2 CR6' || $searchValue == 'Building 2 CR6') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1371,7 +1374,7 @@ elseif ($searchValue == 'B3 R1' || $searchValue == 'Building 3 Room 1') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1411,7 +1414,7 @@ elseif ($searchValue == 'B3 R2' || $searchValue == 'Building 3 Room 2') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1451,7 +1454,7 @@ elseif ($searchValue == 'B3 R3' || $searchValue == 'Building 3 Room 3') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1491,7 +1494,7 @@ elseif ($searchValue == 'B3 R4' || $searchValue == 'Building 3 Room 4') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1531,7 +1534,7 @@ elseif ($searchValue == 'B3 R5' || $searchValue == 'Building 3 Room 5') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1571,7 +1574,7 @@ elseif ($searchValue == 'B3 R6' || $searchValue == 'Building 3 Room 6') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1611,7 +1614,7 @@ elseif ($searchValue == 'B3 R7' || $searchValue == 'Building 3 Room 7') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1651,7 +1654,7 @@ elseif ($searchValue == 'B3 R8' || $searchValue == 'Building 3 Room 8') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1691,7 +1694,7 @@ elseif ($searchValue == 'B3 R9' || $searchValue == 'Building 3 Room 9') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1731,7 +1734,7 @@ elseif ($searchValue == 'B3 R10' || $searchValue == 'Building 3 Room 10') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1771,7 +1774,7 @@ elseif ($searchValue == 'B3 R11' || $searchValue == 'Building 3 Room 11') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1811,7 +1814,7 @@ elseif ($searchValue == 'B3 R12' || $searchValue == 'Building 3 Room 12') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1851,7 +1854,7 @@ elseif ($searchValue == 'B3 R13' || $searchValue == 'Building 3 Room 13') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1891,7 +1894,7 @@ elseif ($searchValue == 'B3 R14' || $searchValue == 'Building 3 Room 14') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1932,7 +1935,7 @@ elseif ($searchValue == 'B3 R15' || $searchValue == 'Building 3 Room 15') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -1973,7 +1976,7 @@ elseif ($searchValue == 'B3 R16' || $searchValue == 'Building 3 Room 16') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2014,7 +2017,7 @@ elseif ($searchValue == 'B3 CR1' || $searchValue == 'Building 3 CR1') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2042,7 +2045,7 @@ elseif ($searchValue == 'B3 CR2' || $searchValue == 'Building 3 CR2') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2070,7 +2073,7 @@ elseif ($searchValue == 'B3 CR3' || $searchValue == 'Building 3 CR3') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2098,7 +2101,7 @@ elseif ($searchValue == 'B3 CR4' || $searchValue == 'Building 3 CR4') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2126,7 +2129,7 @@ elseif ($searchValue == 'B3 CR5' || $searchValue == 'Building 3 CR5') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2154,7 +2157,7 @@ elseif ($searchValue == 'B3 CR6' || $searchValue == 'Building 3 CR6') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2182,7 +2185,7 @@ elseif ($searchValue == 'B3 CR7' || $searchValue == 'Building 3 CR7') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2210,7 +2213,7 @@ elseif ($searchValue == 'B3 CR8' || $searchValue == 'Building 3 CR8') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2238,7 +2241,7 @@ elseif ($searchValue == 'B4 R1' || $searchValue == 'Building 4 Room 1') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2277,7 +2280,7 @@ elseif ($searchValue == 'Principal Office' || $searchValue == 'PO') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2317,7 +2320,7 @@ elseif ($searchValue == 'B4 LRMDS' || $searchValue == 'LRMDS') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2357,7 +2360,7 @@ elseif ($searchValue == 'B4 R2' || $searchValue == 'Building 4 Room 2') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2398,7 +2401,7 @@ elseif ($searchValue == 'E-CLASSROOM' || $searchValue == 'E CLASSROOM') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2439,7 +2442,7 @@ elseif ($searchValue == 'B4 R3' || $searchValue == 'Building 4 Room 3') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2480,7 +2483,7 @@ elseif ($searchValue == 'B4 R4' || $searchValue == 'Building 4 Room 4') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2521,7 +2524,7 @@ elseif ($searchValue == 'B4 R5' || $searchValue == 'Building 4 Room 5') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2562,7 +2565,7 @@ elseif ($searchValue == 'B4 CR1' || $searchValue == 'Building 4 CR1') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2590,7 +2593,7 @@ elseif ($searchValue == 'B4 CR2' || $searchValue == 'Building 4 CR2') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2618,7 +2621,7 @@ elseif ($searchValue == 'B4 CR3' || $searchValue == 'Building 4 CR3') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2646,7 +2649,7 @@ elseif ($searchValue == 'B4 F1' || $searchValue == 'Building 4 Fire Exit 1') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2674,7 +2677,7 @@ elseif ($searchValue == 'B4 F2' || $searchValue == 'Building 4 Fire Exit 2') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2702,7 +2705,7 @@ elseif ($searchValue == 'B4 F3' || $searchValue == 'Building 4 Fire Exit 3') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2730,7 +2733,7 @@ elseif ($searchValue == 'B4 F4' || $searchValue == 'Building 4 Fire Exit 4') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2758,7 +2761,7 @@ elseif ($searchValue == 'B5 UC' || $searchValue == 'Building 5 Under Constructio
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2786,7 +2789,7 @@ elseif ($searchValue == 'B6 R1' || $searchValue == 'Building 6 Room 1') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2827,7 +2830,7 @@ elseif ($searchValue == 'Library' || $searchValue == 'Lib') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2868,7 +2871,7 @@ elseif ($searchValue == 'B6 R2' || $searchValue == 'Building 6 Room 2') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2908,7 +2911,7 @@ elseif ($searchValue == 'B6 R3' || $searchValue == 'Building 6 Room 3') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2948,7 +2951,7 @@ elseif ($searchValue == 'B6 R4' || $searchValue == 'Building 6 Room 4') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -2988,7 +2991,7 @@ elseif ($searchValue == 'Canteen' || $searchValue == 'B6 Canteen') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3016,7 +3019,7 @@ elseif ($searchValue == 'B6 R5' || $searchValue == 'Building 6 Room 5') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3057,7 +3060,7 @@ elseif ($searchValue == 'B6 R6' || $searchValue == 'Building 6 Room 6') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3098,7 +3101,7 @@ elseif ($searchValue == 'B6 R7' || $searchValue == 'Building 6 Room 7') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3138,7 +3141,7 @@ elseif ($searchValue == 'B6 R8' || $searchValue == 'Building 6 Room 8') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3179,7 +3182,7 @@ elseif ($searchValue == 'B6 R9' || $searchValue == 'Building 6 Room 9') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3220,7 +3223,7 @@ elseif ($searchValue == 'B6 R10' || $searchValue == 'Building 6 Room 10') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3261,7 +3264,7 @@ elseif ($searchValue == 'B6 R11' || $searchValue == 'Building 6 Room 11') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3302,7 +3305,7 @@ elseif ($searchValue == 'B6 R12' || $searchValue == 'Building 6 Room 12') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3343,7 +3346,7 @@ elseif ($searchValue == 'B6 R13' || $searchValue == 'Building 6 Room 13') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3383,7 +3386,7 @@ elseif ($searchValue == 'B6 R14' || $searchValue == 'Building 6 Room 14') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3423,7 +3426,7 @@ elseif ($searchValue == 'B6 R15' || $searchValue == 'Building 6 Room 15') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3464,7 +3467,7 @@ elseif ($searchValue == 'B6 R16' || $searchValue == 'Building 6 Room 16') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3505,7 +3508,7 @@ elseif ($searchValue == 'B6 R17' || $searchValue == 'Building 6 Room 17') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3546,7 +3549,7 @@ elseif ($searchValue == 'B6 R18' || $searchValue == 'Building 6 Room 18') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3586,7 +3589,7 @@ elseif ($searchValue == 'B6 CR1' || $searchValue == 'Building 6 CR1') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3614,7 +3617,7 @@ elseif ($searchValue == 'B6 CR2' || $searchValue == 'Building 6 CR2') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3642,7 +3645,7 @@ elseif ($searchValue == 'B6 CR3' || $searchValue == 'Building 6 CR3') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3670,7 +3673,7 @@ elseif ($searchValue == 'B6 CR4' || $searchValue == 'Building 6 CR4') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3698,7 +3701,7 @@ elseif ($searchValue == 'B6 CR5' || $searchValue == 'Building 6 CR5') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3726,7 +3729,7 @@ elseif ($searchValue == 'B6 CR6' || $searchValue == 'Building 6 CR6') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3754,7 +3757,7 @@ elseif ($searchValue == 'B6 CR7' || $searchValue == 'Building 6 CR7') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3782,7 +3785,7 @@ elseif ($searchValue == 'B6 CR8' || $searchValue == 'Building 6 CR8') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3810,7 +3813,7 @@ elseif ($searchValue == 'B8 R1' || $searchValue == 'Building 8 Room 1') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3851,7 +3854,7 @@ elseif ($searchValue == 'B8 R2' || $searchValue == 'Building 8 Room 2') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3891,7 +3894,7 @@ elseif ($searchValue == 'B8 R3' || $searchValue == 'Building 8 Room 3') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3931,7 +3934,7 @@ elseif ($searchValue == 'B8 R4' || $searchValue == 'Building 8 Room 4') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -3972,7 +3975,7 @@ elseif ($searchValue == 'B8 R5' || $searchValue == 'Building 8 Room 5') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4012,7 +4015,7 @@ elseif ($searchValue == 'B8 R6' || $searchValue == 'Building 8 Room 6') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4052,7 +4055,7 @@ elseif ($searchValue == 'B8 R7' || $searchValue == 'Building 8 Room 7') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4093,7 +4096,7 @@ elseif ($searchValue == 'B8 R8' || $searchValue == 'Building 8 Room 8') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4133,7 +4136,7 @@ elseif ($searchValue == 'B8 R9' || $searchValue == 'Building 8 Room 9') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4173,7 +4176,7 @@ elseif ($searchValue == 'B8 R10' || $searchValue == 'Building 8 Room 10') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4214,7 +4217,7 @@ elseif ($searchValue == 'B8 R11' || $searchValue == 'Building 8 Room 11') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4255,7 +4258,7 @@ elseif ($searchValue == 'B8 R12' || $searchValue == 'Building 8 Room 12') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4296,7 +4299,7 @@ elseif ($searchValue == 'B7 IPP Room' || $searchValue == 'Building 7 IPP Room') 
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4339,7 +4342,7 @@ elseif ($searchValue == 'B8 CR1' || $searchValue == 'Building 8 CR1') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4367,7 +4370,7 @@ elseif ($searchValue == 'B8 CR2' || $searchValue == 'Building 8 CR2') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4395,7 +4398,7 @@ elseif ($searchValue == 'B8 CR3' || $searchValue == 'Building 8 CR3') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4423,7 +4426,7 @@ elseif ($searchValue == 'B8 CR4' || $searchValue == 'Building 8 CR4') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4451,7 +4454,7 @@ elseif ($searchValue == 'B8 CR5' || $searchValue == 'Building 8 CR5') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4479,7 +4482,7 @@ elseif ($searchValue == 'B8 CR6' || $searchValue == 'Building 8 CR6') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4507,7 +4510,7 @@ elseif ($searchValue == 'B8 CR7' || $searchValue == 'Building 8 CR7') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4535,7 +4538,7 @@ elseif ($searchValue == 'B8 CR8' || $searchValue == 'Building 8 CR8') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4564,7 +4567,7 @@ elseif ($searchValue == 'Gulayan sa Paaralan' || $searchValue == 'Gulayan') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4606,7 +4609,7 @@ elseif ($searchValue == 'Wash Area' || $searchValue == 'Wash') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4646,7 +4649,7 @@ elseif ($searchValue == 'Covered Court' || $searchValue == 'Court') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4685,7 +4688,7 @@ elseif ($searchValue == 'Holding Area' || $searchValue == 'Hold') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4722,10 +4725,10 @@ elseif ($searchValue == 'Mini Forest' || $searchValue == 'Forest') {
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="../../../assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4765,7 +4768,7 @@ elseif ($searchValue == 'Information Desk' || $searchValue == 'Desk') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 
@@ -4806,7 +4809,7 @@ elseif ($searchValue == 'Flag Pole' || $searchValue == 'Flag') {
       <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
-          15 seconds 
+          <span id="seconds"></span> 
         </p>
       </span>
 

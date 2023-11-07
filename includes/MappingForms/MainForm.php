@@ -26,11 +26,11 @@
       class="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800">
       <div class="w-full">
         <div
-          class="block rounded-2xl bg-gray-100 shadow-2xl">
+          class="block justify-center rounded-2xl bg-gray-100 shadow-2xl">
           <div class="g-0 lg:flex lg:flex-wrap">
             <!-- Left column container-->
             <div class="px-14 py-6 shadow-2xl md:px-0 lg:w-4/12">
-              <div class="md:mx-6 md:p-14 mx-auto">
+              <div class="md:mx-6 md:p-14">
 
                 <?php 
 
