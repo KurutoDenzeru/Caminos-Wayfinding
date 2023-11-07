@@ -4,8 +4,8 @@ const data = {
     {
       "size": 512,
       "blockSize": 12,
-      "map": "mapping/chuchumap.jpg",
-      "debug": true,
+      "map": ["mapping/chuchumap.jpg", "mapping/Restroom.jpg", "mapping/Canteen.jpg"],
+      "debug": false,
       "obstacles": [
         // stage and flag pole
         { "x": 13, "y": 41 },
@@ -588,103 +588,352 @@ const data = {
     }
   ]
 }
+// Image Initiative with Canva drawMap
+
+// Node Representation
+class INode {
+  constructor(x, y, obstacle) {
+    this.x = x;
+    this.y = y;
+    this.obstacle = obstacle;
+    this.gScore = Infinity;
+    this.fScore = Infinity;
+    this.parent = null;
+  }
+}
+// Node Representation
+
+function AStarAlternate(startNode, endNode, grid) {
+  const openSet = new PriorityQueue();
+  const closedSet = [];
+  const paths = [];
+
+  startNode.gScore = 0;
+  startNode.fScore = heuristic(startNode, endNode);
+
+  openSet.enqueue(startNode, startNode.fScore);
+
+  while (!openSet.isEmpty()) {
+    const current = openSet.dequeue().element;
+
+    if (current === endNode) {
+      let node = current;
+      const path = [];
+
+      while (node.parent !== null) {
+        path.unshift(node);
+        node = node.parent;
+      }
+      path.unshift(startNode);
+      paths.push(path);
+    }
+
+    closedSet.push(current);
+
+    for (let x = -1; x <= 1; x++) {
+      for (let y = -1; y <= 1; y++) {
+        if (x === 0 && y === 0) {
+          continue;
+        }
+
+        const neighborX = current.x + x;
+        const neighborY = current.y + y;
+
+        if (
+          neighborX < 0 ||
+          neighborX >= grid.length ||
+          neighborY < 0 ||
+          neighborY >= grid[0].length
+        ) {
+          continue;
+        }
+
+        const neighbor = grid[neighborX][neighborY];
+
+        if (neighbor.obstacle || closedSet.some((element) => element === neighbor)) {
+          continue;
+        }
+
+        const tentativeGScore = current.gScore + heuristic(current, neighbor);
+
+        const existingNeighbor = openSet.elements.find((element) => element.element === neighbor);
+        if (!existingNeighbor) {
+          neighbor.parent = current;
+          neighbor.gScore = tentativeGScore;
+          neighbor.fScore = tentativeGScore + heuristic(neighbor, endNode);
+          openSet.enqueue(neighbor, neighbor.fScore);
+        } else if (tentativeGScore < existingNeighbor.element.gScore) {
+          existingNeighbor.element.parent = current;
+          existingNeighbor.element.gScore = tentativeGScore;
+          existingNeighbor.element.fScore = tentativeGScore + heuristic(neighbor, endNode);
+        }
+      }
+    }
+  }
+
+  return paths;
+}
+
+// Priority Queue implementation
+class PriorityQueue {
+  constructor() {
+    this.elements = [];
+  }
+
+  enqueue(element, priority) {
+    const queueElement = { element, priority };
+
+    if (this.isEmpty()) {
+      this.elements.push(queueElement);
+    } else {
+      let added = false;
+
+      for (let i = 0; i < this.elements.length; i++) {
+        if (queueElement.priority < this.elements[i].priority) {
+          this.elements.splice(i, 0, queueElement);
+          added = true;
+          break;
+        }
+      }
+
+      if (!added) {
+        this.elements.push(queueElement);
+      }
+    }
+  }
+
+  dequeue() {
+    if (this.isEmpty()) {
+      return null;
+    }
+    return this.elements.shift();
+  }
+
+  isEmpty() {
+    return this.elements.length === 0;
+  }
+}
+
+// A* Algorithm
+function AStar(startNode, endNode, grid) {
+  const openSet = [startNode];
+  const closedSet = [];
+  const path = [];
+
+  startNode.gScore = 0;
+  startNode.fScore = heuristic(startNode, endNode);
+
+  while (openSet.length > 0) {
+    // Find node in open set with lowest fScore
+    const current = openSet.reduce((lowest, node) => {
+      return node.fScore < lowest.fScore ? node : lowest;
+    });
+
+    // If current is endNode, build path and return it
+    if (current === endNode) {
+      let node = current;
+      while (node.parent !== null) {
+        path.unshift(node);
+        node = node.parent;
+      }
+      path.unshift(startNode);
+      return path;
+    }
+
+    // Remove current from open set and add it to closed set
+    openSet.splice(openSet.indexOf(current), 1);
+    closedSet.push(current);
+
+    // Check neighbors of current node
+    for (let x = -1; x <= 1; x++) {
+      for (let y = -1; y <= 1; y++) {
+        if (x === 0 && y === 0) {
+          continue;
+        }
+
+        const neighborX = current.x + x;
+        const neighborY = current.y + y;
+
+        // Check if neighbor is within grid boundaries
+        if (
+          neighborX < 0 ||
+          neighborX >= grid.length ||
+          neighborY < 0 ||
+          neighborY >= grid[0].length
+        ) {
+          continue;
+        }
+
+        const neighbor = grid[neighborX][neighborY];
+
+        // Check if neighbor is an obstacle or already in closed set
+        if (neighbor.obstacle || closedSet.includes(neighbor)) {
+          continue;
+        }
+
+        // Calculate tentative gScore for neighbor
+        const tentativeGScore = current.gScore + heuristic(current, neighbor);
+
+        // Add neighbor to open set if not already there
+        if (!openSet.includes(neighbor)) {
+          openSet.push(neighbor);
+        } else if (tentativeGScore >= neighbor.gScore) {
+          continue;
+        }
+
+        // Update neighbor's parent and scores
+        neighbor.parent = current;
+        neighbor.gScore = tentativeGScore;
+        neighbor.fScore = tentativeGScore + heuristic(neighbor, endNode);
+      }
+    }
+  }
+
+  // No path found
+  return null;
+}
+
+// Heuristic Return Value
+function heuristic(nodeA, nodeB) {
+  const dx = Math.abs(nodeA.x - nodeB.x);
+  const dy = Math.abs(nodeA.y - nodeB.y);
+  
+  return dx + dy;
+}
+// Heuristic Return Value
+
+let endPosLog = []
+
 // Map Graphics itself
 function drawMap(index, startPos, endPos) {
-  const map = data.maps[index];
-  const element = document.createElement('canvas'); // create element
-  const ctx = element.getContext('2d');
+  const map = data.maps[index]
+  let element = document.getElementById('myCanvas') // create element
+  let ctx
 
-  element.setAttribute('width', map.size);
-  element.setAttribute('height', map.size);
+  if (document.getElementById('myCanvas')) {
+    // Canvas element with the specified id exists
+    console.log('Canvas element exists');
 
-  const drawGrid = () => {
-    const blocks_x = Math.floor(map.size / map.blockSize);
-    const blocks_y = Math.floor(map.size / map.blockSize);
-    const grid = [];
+    ctx = element.getContext('2d')
+    ctx.clearRect(0, 0, map.size, map.size);
+  } else {
+    // Canvas element with the specified id does not exist
+    console.log('Canvas element does not exist');
+
+    element = document.createElement('canvas')
+    ctx = element.getContext('2d')
+
+    element.setAttribute('width', map.size)
+    element.setAttribute('height', map.size)
+
+    element.setAttribute('id', 'myCanvas')
+  }
+  
+  const drawGrid = (color, start, end, results) => {
+    // ...
+  
+    let animationProgress = 0; // Variable to track animation progress
+  
+    const animateStroke = () => {
+      animationProgress += 0.01; // Increment animation progress
+  
+      ctx.beginPath();
+      ctx.moveTo(start.x * map.blockSize, start.y * map.blockSize);
+  
+      for (let i = 0; i < results.length * animationProgress; i++) {
+        const result = results[i];
+  
+        ctx.lineTo(result.x * map.blockSize, result.y * map.blockSize);
+      }
+  
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 3;
+      ctx.stroke();
+  
+      if (animationProgress < 1) {
+        requestAnimationFrame(animateStroke); // Call the animation recursively
+      }
+    };
+  
+    animateStroke(); // Start the animation
+  }  
+
+  const image = new Image();
+  image.src = (window.location.href.includes('?restroom')) ? map.map[1] : (window.location.href.includes('?canteen')) ? map.map[2] : map.map[0]
+
+  image.onload = () => {
+    ctx.drawImage(image, 0, 0);
+
+    const blocks_x = Math.floor(map.size / map.blockSize),
+      blocks_y = Math.floor(map.size / map.blockSize),
+      grid = []
 
     for (let x = 0; x < blocks_x; x++) {
-      const row = [];
+      const row = []
 
       for (let y = 0; y < blocks_y; y++) {
         const isObstacle = map.obstacles.find(
           (obstacle) => obstacle.x === x && obstacle.y === y
-        );
+        )
 
         if (map.debug) {
-          if (isObstacle) {
-            // debug
-            ctx.fillStyle = '#FF0000';
+          if (isObstacle) { // debug
+            ctx.fillStyle = '#FF0000'
             ctx.fillRect(
               x * map.blockSize,
               y * map.blockSize,
               map.blockSize,
               map.blockSize
-            );
-          } else ctx.strokeRect(x * map.blockSize, y * map.blockSize, map.blockSize, map.blockSize);
+            )
+          } else ctx.strokeRect(
+            x * map.blockSize,
+            y * map.blockSize,
+            map.blockSize,
+            map.blockSize
+          )
         }
 
-        row.push(new INode(x, y, !!isObstacle));
+        row.push(
+          new INode(x, y, !!isObstacle)
+        )
       }
 
-      grid.push(row);
+      grid.push(row)
     }
 
-    const start = grid[startPos.x][startPos.y];
-    const end = grid[endPos.x][endPos.y];
-    const results = AStar(start, end, grid);
+    let start
+    const length = endPosLog.length
 
-    // Animate the drawing
-    const duration = 1000; // Duration of animation in milliseconds
-    const interval = 10; // Interval for animation frames
-    let startTime = null;
+    if (length == 0) {
+      start = grid[startPos.x][startPos.y]
 
-    const animatePath = (timestamp) => {
-      if (!startTime) startTime = timestamp;
-      const progress = (timestamp - startTime) / duration;
+      endPosLog.push({x: startPos.x, y: startPos.y})
+      endPosLog.push({x: endPos.x, y: endPos.y})
+    }
+    else if (endPosLog[length - 1].x == endPos.x && endPosLog[length - 1].y == endPos.y) {
+      start = grid[endPosLog[length - 2].x][endPosLog[length - 2].y]
+    }
+    else {
+      start = grid[endPosLog[length - 1].x][endPosLog[length - 1].y]
 
-      ctx.clearRect(0, 0, element.width, element.height); // Clear the canvas
+      endPosLog.push({x: endPos.x, y: endPos.y})
+    }
 
-      const easeInOutProgress = easeInOut(progress);
-      ctx.drawImage(img, 0, 0, map.size, map.size);
-      ctx.beginPath();
-      ctx.moveTo(start.x * map.blockSize, start.y * map.blockSize);
 
-      const animationLength = Math.floor(easeInOutProgress * results.length);
+    const end = grid[endPos.x][endPos.y]
+      
+    const results = AStar(start, end, grid)
+    const results2 = AStarAlternate(start, end, grid)
 
-      for (let i = 0; i < animationLength; i++) {
-        const result = results[i];
-        ctx.lineTo(result.x * map.blockSize, result.y * map.blockSize);
-      }
+    document.getElementById('seconds').innerHTML = Math.ceil(results.length / 3.18) + " seconds";
 
-      ctx.strokeStyle = '#00FF00';
-      ctx.lineWidth = 3;
-      ctx.stroke();
+    if (results2) {
+      drawGrid('#FF0000', start, end, results2[0])
+    }
+    if (results) {
+      drawGrid('#00FF00', start, end, results)
+    }
 
-      if (animationLength < results.length - 1) {
-        requestAnimationFrame(animatePath);
-      }
-
-      // Add labels
-      ctx.fillStyle = '#000000';
-      ctx.font = '14px Arial';
-      ctx.fillText('You\'re here', start.x * map.blockSize, start.y * map.blockSize - 5);
-      ctx.fillText('Your destination', end.x * map.blockSize, end.y * map.blockSize - 5);
-    };
-
-    requestAnimationFrame(animatePath);
   };
-
-  const img = new Image();
-  img.src = map.map;
-
-  img.onload = () => {
-    drawGrid();
-  };
-
-  document.body.appendChild(element);
 }
-
-// Easing function for smooth animation
-function easeInOut(t) {
-  return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-}
+// Map Graphics itself

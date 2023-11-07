@@ -1,12 +1,3 @@
-<?php  
-
-    include ("connection.php");
-    include ('/includes/header.php');
-    session_start();
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,6 +25,72 @@
     <link rel="icon" type="text/css" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/Styles.css">
 </head>
+
+    <!-- Asynchronous Request Data Image -->
+    <script>
+        $(document).ready(function() {
+            $("#search").keyup(function() {
+                var searchText = $(this).val();
+                $.ajax({
+                    url: "MainFormSearch.php",
+                    type: "post",
+                    data: {searchText: searchText},
+                    success: function(response) {
+                        $("#image").attr("src", response);
+                    }
+                });
+            });
+        });
+    </script>   
+    <!-- Asynchronous Request Data Image -->
+
+
+    <!-- Asynchronous Request of Algorithm -->
+
+      <script>
+        $(document).ready(function() {
+          $('#searchMap').on('input', function() {
+            var searchText = $(this).val();
+
+            $.ajax({
+              url: 'searchMap.php',
+              type: 'POST',
+              data: { searchMap: searchMap },
+              success: function(response) {
+                $('#imageContainer').html(response);
+              }
+            });
+          });
+        });
+      </script>
+    <!-- Asyncrhonous Request of Algorithm -->
+
+
+    <!-- Asynchronous Request of Estimated Time of Arrival / ETA -->
+    <script>
+      function search() {
+        var searchValue = $('#searchInput').val();
+
+        // Make an AJAX request to a PHP script
+        $.ajax({
+          url: 'search.php',
+          type: 'POST',
+          data: { searchValue: searchValue },
+          success: function(response) {
+            $('#searchResult').html(response);
+          }
+        });
+      }
+    </script> 
+    <!-- Asynchronous Request of Estimated Time of Arrival / ETA -->
+
+    <style>
+      canvas {
+        border-radius: 10px ;
+        border: 3px solid black;
+      }
+    </style>    
+    <!-- Asynchronous Request of Estimated Time of Arrival / ETA -->
 
     <!-- Tooltip -->
       <style>
@@ -154,7 +211,31 @@
                                     <div class="row py-2">
                                         <div class="col-sm"><span style="font-size: 20px;color: rgb(0,0,0);">
                                             <p id="hashcode"></p>
-                                        </span></div>                                    
+                                        </span></div>
+
+                                        <!-- Math Floor Random Hashcode  -->
+
+                                          <script>
+                                            function generateHashcode(length) {
+                                              let result = '';
+                                              const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+                                              for (let i = 0; i < length; i++) {
+                                                const randomIndex = Math.floor(Math.random() * characters.length);
+                                                result += characters.charAt(randomIndex);
+                                              }
+
+                                              return result;
+                                            }
+
+                                            const hashcodeElement = document.getElementById('hashcode');
+                                            const generatedHashcode = generateHashcode(15);
+
+                                            hashcodeElement.textContent = `Hello, ${generatedHashcode}`;
+
+                                          </script>    
+
+                                        <!-- Math Floor Random Hashcode  -->                                        
                                         
                                         <!-- Sign Out -->
                                         <div onclick="window.location.href='index.php';" class="col-sm" 
@@ -192,9 +273,7 @@
                                         <!-- Canteen Action -->
                                         <div class="col-sm" id="btn">
                                             <button class="btn w-100 btn-primary" type="button" style="border-radius: 10px;background: rgb(242,242,242);color: rgb(0,0,0);border-color: rgb(214,214,214);box-shadow: 0px 0px;"
-
-                                                onclick="changeImage()"
-
+                                              onclick="addCanteenQueryParam()"
                                             >
                                                    Canteen
                                             </button>
@@ -202,7 +281,7 @@
                                         <!-- Canteen Action -->
                                         
                                         <!-- Restroom Action -->
-                                        <div class="col-sm" id="btn" style="border-radius: 23px;" onclick="window.location.href='MainForm-Restroom.php';">
+                                        <div class="col-sm" id="btn" style="border-radius: 23px;" onclick="addRestroomQueryParam()">
 
                                             <button class="btn  w-100 btn-primary" type="button" style="border-radius: 10px;background: rgb(242,242,242);color: rgb(0,0,0);border-color: rgb(214,214,214);">
                                                     Restroom
@@ -225,13 +304,7 @@
 
                                     
 
-                                    <!-- ETA -->
-                                    <div id="searchResult" 
-                                    class="py-5 pt-5 pb-5 fs-3 text-center">
-                                    
-                                        
-                                    </div>
-                                    <!-- ETA -->
+                                   
 
 
                                     
@@ -245,11 +318,13 @@
                             </div>
 
                             <!-- Wayfinding System -->
-                            <div class="col-sm d-flex justify-content-center py-5 ">
-                                <img id="mapContainer" src="mapping/chuchumap.jpg" class="image-fluid py-5" style="width: 55vh; border-radius: 15px;">
-                            </div>
-          
+                            <div class="col-sm d-flex flex-column align-items-center py-5">
+                              <canvas id="myCanvas" style="width: 512px !important; height: 512px !important;"></canvas>
 
+                              <!-- ETA -->
+                              <div id="searchResult" class="fs-3 text-center"></div>
+                              <!-- ETA -->
+                            </div>
                             <!-- Wayfinding System -->
 
 
@@ -260,10 +335,60 @@
         </div>
     </div>
 
-
-
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script>
+      function refreshImage(){
+        const img = new Image
+        img.src = (window.location.href.includes('?restroom')) ? "mapping/Restroom.jpg" : (window.location.href.includes('?canteen')) ? "mapping/Canteen.jpg" : "mapping/chuchumap.jpg"
+
+        img.onload = () => {
+          let element = document.getElementById('myCanvas')
+          ctx = element.getContext('2d')
+          element.width = 512
+          element.height = 512
+          ctx.drawImage(img, 0, 0, 512, 512)
+        }
+      }
+
+      refreshImage()
+
+      function addRestroomQueryParam() {
+        removeAllQueryParam()
+
+        const currentUrl = window.location.href;
+        const updatedUrl = currentUrl + '?restroom';
+        window.history.replaceState(null, '', updatedUrl);
+
+        refreshImage()
+        if(endPosLog) endPosLog = []
+      }
+
+      function addCanteenQueryParam() {
+        removeAllQueryParam()
+        
+        const currentUrl = window.location.href;
+        const updatedUrl = currentUrl + '?canteen';
+        window.history.replaceState(null, '', updatedUrl);
+
+        refreshImage()
+        if(endPosLog) endPosLog = []
+      }
+
+      function removeAllQueryParam() {
+        const currentUrl = window.location.href;
+
+        if (currentUrl.includes('?restroom')) {
+          const updatedUrl = currentUrl.replace('?restroom', '');
+          window.history.replaceState(null, '', updatedUrl);
+        }
+
+        if (currentUrl.includes('?canteen')) {
+          const updatedUrl = currentUrl.replace('?canteen', '');
+          window.history.replaceState(null, '', updatedUrl);
+        }
+      }
+    </script>
 </body>
 
 </html>

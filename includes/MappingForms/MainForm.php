@@ -39,7 +39,7 @@
                 ?>       
 
                 <div class="text-center py-14">
-                    <img src="../../assets/img/caminoslogo.png" class="mx-auto w-48">                                  
+                    <img src="../../assets/img/caminoslogo.png" class="mx-auto w-48 sm:w-32">                                  
                 </div>
 
                 <div class="relative mt-6" data-toggle="tooltip" data-placement="top" title="e.g. Building 1 Room 1 / B1 R1">
@@ -52,7 +52,6 @@
                                 </svg>
                             </div>
                             <input type="text" id="searchInput" onkeyup="search()" class="block w-full p-4 pl-10 text-sm text-gray-900 border-1 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Search" required>
-                            <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                         </div>
                     </form>
 

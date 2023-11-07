@@ -49,25 +49,20 @@
 
 
       <script>
-function search() {
-  var searchValue = $('#searchInput').val();
+        $(document).ready(function() {
+          $('#searchMap').on('input', function() {
+            var searchText = $(this).val();
 
-  // Make an AJAX request to a PHP script
-  $.ajax({
-    url: 'search.php',
-    type: 'POST',
-    data: { searchValue: searchValue },
-    success: function(response) {
-      // Assuming that the response contains the image URL
-      // You can adjust this part based on the actual response structure
-      var imageURL = response; 
-
-      // Update the src attribute of the imageContainer
-      $('#imageContainer').attr('src', imageURL);
-    }
-  });
-}
-
+            $.ajax({
+              url: 'searchMap.php',
+              type: 'POST',
+              data: { searchMap: searchMap },
+              success: function(response) {
+                $('#imageContainer').html(response);
+              }
+            });
+          });
+        });
       </script>
 
 
@@ -104,12 +99,63 @@ function search() {
                             <div class="col-lg-4 col-xl-4 col-xxl-4">
                                 <div id="back" class="p-5">
 
+                                    <!-- Carousel Promotion -->
+                                    <div class="carousel slide" data-bs-ride="false" id="carousel-1">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img class="w-100 d-block border-5" src="assets/img/331961607_517802583833552_3972991969740231441_n.jpg" alt="Slide Image">
+                                            </div>
+                                            
+                                            <div class="carousel-item"><img class="w-100 d-block" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image"></div>
+                                            
+                                            <div class="carousel-item"><img class="w-100 d-block" style="border-radius: 15px" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image"></div>
+
+                                        </div>
+
+                                        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                                        
+                                        <ol class="carousel-indicators">
+                                            
+                                            <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+                                            
+                                            <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+                                            
+                                            <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+                                        </ol>
+
+                                    </div>
+                                    <!-- Carousel Promotion -->
+
                                     <!-- Greeting Remarks -->
                                     <div class="row" style="margin: 15px 0px 15px 0px;">
                                         <div class="col-7 col-sm-6 col-md-6 col-lg-8 col-xl-8 col-xxl-8"><span style="font-size: 16px;color: rgb(0,0,0);">
 
                                             <p id="hashcode"></p>
-                                        </span></div>                                     
+                                        </span></div>
+
+                                        <!-- Math Floor Random Hashcode  -->
+
+                                          <script>
+                                            function generateHashcode(length) {
+                                              let result = '';
+                                              const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+                                              for (let i = 0; i < length; i++) {
+                                                const randomIndex = Math.floor(Math.random() * characters.length);
+                                                result += characters.charAt(randomIndex);
+                                              }
+
+                                              return result;
+                                            }
+
+                                            const hashcodeElement = document.getElementById('hashcode');
+                                            const generatedHashcode = generateHashcode(8);
+
+                                            hashcodeElement.textContent = `Hello, Visitor: ${generatedHashcode}`;
+                                            
+                                          </script>    
+
+                                        <!-- Math Floor Random Hashcode  -->                                        
                                         
                                         <!-- Sign Out -->
                                         <div onclick="window.location.href='index.php';" class="col-5 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4" style="text-align: right;color: rgb(0,0,0);"><i class="fas fa-sign-out-alt" style="font-size: 20px;color: rgb(0,0,0); cursor:pointer;"></i>
@@ -118,33 +164,55 @@ function search() {
                                     </div>
                                     <!-- Greeting Remarks -->
 
+                                    
+
                                     <!-- Search Bar -->                                  
                                     <div>
-                                        <input type="text" class="form-control-sm" id="searchInput" onkeyup="search()"
+
+                                        <input type="text" class="form-control-sm" 
+                                        
+                                            id="searchInput" 
+
+                                            onkeyup="search()"
                                         style="width: 100%;margin-bottom: 10px;border-radius: 10px;background: rgb(242,242,242);border: 1px solid #D6D6D6;" 
                                             placeholder="Where to go?">
 
                                     </div>
+                                    <!-- Search Bar -->
+
+
+
                                     <!-- Quick Actions -->
                                     <div class="row px-5 d-flex justify-content-center">
 
                                         <div class="col-sm w-50" id="btn">
-                                            <button class="btn btn-primary" type="button" style="border-radius: 10px;background: rgb(242,242,242);color: rgb(0,0,0);border-color: rgb(214,214,214);box-shadow: 0px 0px;">
-                                                Canteen
+                                            <button class="btn btn-primary" onclick="removeRestroomQueryParam()" type="button" style="border-radius: 10px;background: rgb(242,242,242);color: rgb(0,0,0);border-color: rgb(214,214,214);box-shadow: 0px 0px;">       Canteen
                                             </button>
                                         </div>
                                         
                                         <div class="col-sm w-50" id="btn" style="border-radius: 23px;">
 
-                                            <button class="btn btn-primary" type="button" style="border-radius: 10px;background: rgb(242,242,242);color: rgb(0,0,0);border-color: rgb(214,214,214);">
+                                            <button class="btn btn-primary" onclick="addRestroomQueryParam()" type="button" style="border-radius: 10px;background: rgb(242,242,242);color: rgb(0,0,0);border-color: rgb(214,214,214);">
                                                     Restroom
                                             </button>
 
                                          </div>
-                                    </div>                                
+                                    </div>
+
+                                    <!-- Quick Actions -->
+
+                                    
+
                                     <!-- ETA -->
-                                        <div id="searchResult" class="py-5 pt-5 pb-5 fs-3 text-center">                                    
-                                        </div>
+                                    <div id="searchResult" 
+                                    class="py-5 pt-5 pb-5 fs-3 text-center">
+                                        
+                                        
+                                    </div>
+                                    <!-- ETA -->
+
+
+                                    
                                     <!-- Footer -->
                                     <p class="text-muted" style="text-align: center;margin-top: 30px;">
                                         Copyright&nbsp;© 2023 Brand
@@ -155,9 +223,8 @@ function search() {
                             </div>
 
                             <!-- Wayfinding System -->
-                            <div class="col-sm d-flex justify-content-center">
-                                    <img id='imageContainer' src="mapping/newdefault.jpg"
-                                        class="rounded image-fluid" style="width: 75vh" >
+                            <div class="col-sm d-flex flex-column align-items-center py-5">
+                              <canvas id="myCanvas" style="width: 512px !important; height: 512px !important;"></canvas>
                             </div>
                             <!-- Wayfinding System -->
 
@@ -173,6 +240,39 @@ function search() {
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script>
+      const img = new Image
+      img.src = (window.location.href.includes('?restroom')) ? "mapping/Restroom.jpg" : "mapping/chuchumap.jpg"
+
+      img.onload = () => {
+        let element = document.getElementById('myCanvas')
+        ctx = element.getContext('2d')
+        element.width = 512
+        element.height = 512
+        ctx.drawImage(img, 0, 0, 512, 512)
+      }
+
+      function addRestroomQueryParam() {
+        const currentUrl = window.location.href;
+        const hasRestroomQueryParam = currentUrl.includes('?restroom');
+
+        if (!hasRestroomQueryParam) {
+          const updatedUrl = currentUrl + '?restroom';
+          window.history.replaceState(null, '', updatedUrl);
+        }
+
+        search()
+      }
+
+      function removeRestroomQueryParam() {
+        const currentUrl = window.location.href;
+        const updatedUrl = currentUrl.replace('?restroom', '');
+
+        window.history.replaceState(null, '', updatedUrl);
+
+        search()
+      }
+    </script>
 </body>
 
 </html>
