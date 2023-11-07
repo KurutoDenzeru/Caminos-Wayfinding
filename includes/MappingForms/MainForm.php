@@ -26,7 +26,7 @@
       class="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800">
       <div class="w-full">
         <div
-          class="block justify-center rounded-2xl bg-gray-100 shadow-2xl">
+          class="block rounded-2xl bg-gray-100 shadow-2xl">
           <div class="g-0 lg:flex lg:flex-wrap">
             <!-- Left column container-->
             <div class="px-14 py-6 shadow-2xl md:px-0 lg:w-4/12">
@@ -39,7 +39,7 @@
                 ?>       
 
                 <div class="text-center py-8">
-                    <img src="../../assets/img/caminoslogo.png" class="mx-auto w-48 md:w-32 sm:w-24">                                  
+                    <img src="../../assets/img/caminoslogo.png" class="mx-auto w-48 md:w-24 sm:w-28">                                  
                 </div>
 
                 <div class="relative mt-6" data-toggle="tooltip" data-placement="top" title="e.g. Building 1 Room 1 / B1 R1">
@@ -51,7 +51,7 @@
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                                 </svg>
                             </div>
-                            <input type="text" id="searchInput" onkeyup="search()" class="block w-full p-4 pl-10 text-sm text-gray-900 border-1 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Search" required>
+                            <input type="text" id="searchInput" onkeyup="search()" class="block w-full p-2 pl-10 text-sm text-gray-900 border-1 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Search" required>
                         </div>
                     </form>
 
@@ -72,11 +72,15 @@
 
             <!-- Right column container with background and description-->
             <div class="flex p-8 items-center rounded-b-2xl lg:w-8/12 lg:rounded-r-2xl lg:rounded-bl-none bg-fixed bg-cover bg-center">
-              <div class="flex justify-self-center justify-center ">                
+              <div class="flex justify-self-center justify-center">                
 
                 <!-- Wayfinding System -->
-                    <img id='imageContainer' src="../../mapping/newdefault.jpg"
-                        class="rounded-lg image-fluid w-3/5 shadow-lg">
+                    <!-- <img id='imageContainer' src="../../mapping/chuchumap.jpg"
+                        class="rounded-lg image-fluid w-3/5 shadow-lg"> -->
+                <img id='myCanvas' src="../../mapping/chuchumap.jpg"
+                        class="rounded-lg image-fluid w-3/5 shadow-lg">                                        
+                    <!-- <canvas id="myCanvas" class="rounded-lg image-fluid w-3/5 shadow-lg object-cover"></canvas> -->
+
               </div>
             </div>
 
@@ -90,14 +94,14 @@
 <!-- Fetch Script -->
 <script>
       const img = new Image
-      img.src = (window.location.href.includes('?restroom')) ? "mapping/Restroom.jpg" : "mapping/chuchumap.jpg"
+      img.src = (window.location.href.includes('?restroom')) ? "mapping/Restroom.jpg" : "../../mapping/chuchumap.jpg"
 
       img.onload = () => {
         let element = document.getElementById('myCanvas')
         ctx = element.getContext('2d')
-        element.width = 512
-        element.height = 512
-        ctx.drawImage(img, 0, 0, 512, 512)
+        element.width = 1080
+        element.height = 1080
+        ctx.drawImage(img, 0, 0, 1080, 1080)
       }
 
       function addRestroomQueryParam() {
