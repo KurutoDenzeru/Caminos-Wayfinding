@@ -73,10 +73,10 @@
 
                 <!-- <img src="../assets/img/ABESLogo.png" class="img-fluid w-24 text-end"> -->
 
-                <p class="text-2xl font-extrabold from-red-600 via-pink-blue to-violet-600">
+                <h2 class="text-3xl font-extrabold">
                   Andres Bonifacio Elementary School <br>
-                  Path Finding System
-                </p>
+                  Wayfinding System
+                </h2>
 
               </div>
             </div>

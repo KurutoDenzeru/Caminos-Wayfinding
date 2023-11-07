@@ -30,17 +30,15 @@
           class="block rounded-2xl bg-gray-100 shadow-2xl">
           <div class="g-0 lg:flex lg:flex-wrap">
             <!-- Left column container-->
-            <div class="px-14 py-6 shadow-2xl md:px-0 lg:w-4/12">
-              <div class="md:mx-6 md:p-14">
+            <div class="px-14 py-6 shadow-2xl md:px-0 lg:w-4/12 ">
+              <div class="md:mx-6 md:p-14 my-auto">
 
                 <?php include ('logout.php'); ?>       
 
-                <div class="text-center py-8">
-                    <!-- <img src="../../assets/img/caminoslogo.png" class="mx-auto w-48 md:w-24 sm:w-28"> -->
-
-                    <h2 class="text-start lg:text-start font-bold text-3xl sm:text-4xl leading-none">
-				              Welcome, Student.
-			              </h2>                    
+                <div class="text-center py-8 mt-6">
+                    <h1 class="text-start lg:text-start font-bold text-3xl sm:text-4xl leading-none">
+				              Welcome, Student, have a great day ahead.
+			              </h1>                    
                 </div>
 
                 <div class="relative mt-6" data-toggle="tooltip" data-placement="top" title="e.g. Building 1 Room 1 / B1 R1">
