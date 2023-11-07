@@ -23,58 +23,21 @@
 
 </head>
 
-    <!-- Asynchronous Request Data Image -->
-    <script>
-        $(document).ready(function() {
-            $("#search").keyup(function() {
-                var searchText = $(this).val();
-                $.ajax({
-                    url: "MainFormSearch.php",
-                    type: "post",
-                    data: {searchText: searchText},
-                    success: function(response) {
-                        $("#image").attr("src", response);
-                    }
-                });
-            });
-        });
-    // Asynchronous Request of Algorithm
-      $(document).ready(function() {
-        $('#searchMap').on('input', function() {
-          var searchText = $(this).val();
-
-          $.ajax({
-            url: 'searchMap.php',
-            type: 'POST',
-            data: { searchMap: searchMap },
-            success: function(response) {
-              $('#imageContainer').html(response);
-            }
-          });
-        });
-      });
-    // Asynchronous Request of Estimated Time of Arrival / ETA
-      function search() {
-        var searchValue = $('#searchInput').val();
-
-        // Make an AJAX request to a PHP script
-        $.ajax({
-          url: 'search.php',
-          type: 'POST',
-          data: { searchValue: searchValue },
-          success: function(response) {
-            $('#searchResult').html(response);
-          }
-        });
+<!-- Asynchronous Request of Estimated Time of Arrival / ETA -->
+<script>
+  function search() {
+    var searchValue = $('#searchInput').val();
+    // Make an AJAX request to a PHP script
+    $.ajax({
+      url: 'search.php',
+      type: 'POST',
+      data: { searchValue: searchValue },
+      success: function(response) {
+        $('#searchResult').html(response);
       }
-    </script>     
-    <!-- Canvas Size -->
-    <style>
-      canvas {
-        border-radius: 10px ;
-        border: 3px solid black;
-      }
-    </style>    
+    });
+  }
+</script> 
     
 <style>
     /* CSS styles for the tooltip */

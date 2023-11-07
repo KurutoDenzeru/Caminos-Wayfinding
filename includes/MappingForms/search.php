@@ -1,14 +1,20 @@
 <?php
 // Retrieve the search value from the AJAX request
+
+
+
 $searchValue = $_POST['searchValue'];
+
+// Convert the input to lowercase
+$searchValue = strtolower($searchValue);
 
 // Perform your search logic and generate the text based on the search value
 
 // Building 1 Room 1
-if ($searchValue == 'B1 R1' || $searchValue == 'Building 1 Room 1') {
+if ($searchValue == 'b1 r1' || $searchValue == 'building 1 room 1') {
   $text = '
 
-  <p>Building 1 Room 1,</p>
+  <p>Building 1 - 1st Floor, Room 1</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -43,14 +49,14 @@ if ($searchValue == 'B1 R1' || $searchValue == 'Building 1 Room 1') {
   ;
 } 
 
-elseif ($searchValue == 'B1 R2' || $searchValue == 'Building 1 Room 2') {
+elseif ($searchValue == 'b1 r2' || $searchValue == 'building 1 room 2') {
   
   $text = '
 
-  <p>Building 1 Room 2,</p>
+  <p>Building 1 - 1st Floor, Room 2,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
-    <div class="col-sm">
+    <div class "col-sm">
       
       <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
@@ -81,13 +87,12 @@ elseif ($searchValue == 'B1 R2' || $searchValue == 'Building 1 Room 2') {
 
   ;
 
-} 
-
-elseif ($searchValue == 'B1 R3' || $searchValue == 'Building 1 Room 3') {
+}
+elseif ($searchValue == 'b1 r3' || $searchValue == 'building 1 room 3') {
   
   $text = '
 
-  <p>Building 1 Room 3,</p>
+  <p>Building 1 - 1st Floor, Room 3,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -126,11 +131,11 @@ elseif ($searchValue == 'B1 R3' || $searchValue == 'Building 1 Room 3') {
 
 } 
 
-elseif ($searchValue == 'B1 R4' || $searchValue == 'Building 1 Room 4') {
+elseif ($searchValue == 'b1 r4' || $searchValue == 'building 1 room 4') {
   
   $text = '
 
-  <p>Building 1 Room 4,</p>
+  <p>Building 1 - 1st Floor, Room 4,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -166,11 +171,11 @@ elseif ($searchValue == 'B1 R4' || $searchValue == 'Building 1 Room 4') {
 
 }
 
-elseif ($searchValue == 'B1 R5' || $searchValue == 'Building 1 Room 5') {
+elseif ($searchValue == 'b1 r5' || $searchValue == 'building 1 room 5') {
   
   $text = '
 
-  <p>Building 1 Room 5,</p>
+  <p>Building 1 - 2nd Floor, Room 5,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -206,11 +211,11 @@ elseif ($searchValue == 'B1 R5' || $searchValue == 'Building 1 Room 5') {
 
 }  
 
-elseif ($searchValue == 'B1 R6' || $searchValue == 'Building 1 Room 6') {
+elseif ($searchValue == 'b1 r6' || $searchValue == 'building 1 room 6') {
   
   $text = '
 
-  <p>Building 1 Room 6,</p>
+  <p>Building 1 - 2nd Floor, Room 6,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -246,11 +251,11 @@ elseif ($searchValue == 'B1 R6' || $searchValue == 'Building 1 Room 6') {
 
 } 
 
-elseif ($searchValue == 'B1 R7' || $searchValue == 'Building 1 Room 7') {
+elseif ($searchValue == 'b1 r7' || $searchValue == 'building 1 room 7') {
   
   $text = '
 
-  <p>Building 1 Room 7,</p>
+  <p>Building 1 - 3rd Floor, Room 7,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -285,11 +290,11 @@ elseif ($searchValue == 'B1 R7' || $searchValue == 'Building 1 Room 7') {
 
 } 
 
-elseif ($searchValue == 'B1 R8' || $searchValue == 'Building 1 Room 8') {
+elseif ($searchValue == 'b1 r8' || $searchValue == 'building 1 room 8') {
   
   $text = '
 
-  <p>Building 1 Room 8,</p>
+  <p>Building 1 - 3rd Floor, Room 8,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -324,11 +329,11 @@ elseif ($searchValue == 'B1 R8' || $searchValue == 'Building 1 Room 8') {
 
 } 
 
-elseif ($searchValue == 'B1 R9' || $searchValue == 'Building 1 Room 9') {
+elseif ($searchValue == 'b1 r9' || $searchValue == 'building 1 room 9') {
   
   $text = '
 
-  <p>Building 1 Room 9,</p>
+  <p>Building 1 - 3rd Floor, Room 9,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -363,11 +368,11 @@ elseif ($searchValue == 'B1 R9' || $searchValue == 'Building 1 Room 9') {
 
 } 
 
-elseif ($searchValue == 'B1 R10' || $searchValue == 'Building 1 Room 10') {
+elseif ($searchValue == 'b1 r10' || $searchValue == 'building 1 room 10') {
   
   $text = '
 
-  <p>Building 1 Room 10,</p>
+  <p>Building 1 - 4th Floor, Room 10,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -402,11 +407,11 @@ elseif ($searchValue == 'B1 R10' || $searchValue == 'Building 1 Room 10') {
 
 } 
 
-elseif ($searchValue == 'B1 R11' || $searchValue == 'Building 1 Room 11') {
+elseif ($searchValue == 'b1 r11' || $searchValue == 'building 1 room 11') {
   
   $text = '
 
-  <p>Building 1 Room 11,</p>
+  <p>Building 1 - 4th Floor, Room 11,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -442,11 +447,11 @@ elseif ($searchValue == 'B1 R11' || $searchValue == 'Building 1 Room 11') {
 
 } 
 
-elseif ($searchValue == 'B1 R12' || $searchValue == 'Building 1 Room 12') {
+elseif ($searchValue == 'b1 r12' || $searchValue == 'building 1 room 12') {
   
   $text = '
 
-  <p>Building 1 Room 12,</p>
+  <p>Building 1 - 4th Floor, Room 12,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -705,11 +710,11 @@ elseif ($searchValue == 'B1 CR8' || $searchValue == 'Building 1 CR8') {
 
 } 
 
-elseif ($searchValue == 'B2 R1' || $searchValue == 'Building 2 Room 1') {
+elseif ($searchValue == 'b2 r1' || $searchValue == 'building 2 room 1') {
   
   $text = '
 
-  <p>Building 2 Room 1,</p>
+  <p>Building 2 - 1st Floor, Room 1,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -744,11 +749,11 @@ elseif ($searchValue == 'B2 R1' || $searchValue == 'Building 2 Room 1') {
 
 } 
 
-elseif ($searchValue == 'B2 R2' || $searchValue == 'Building 2 Room 2') {
+elseif ($searchValue == 'b2 r2' || $searchValue == 'building 2 room 2') {
   
   $text = '
 
-  <p>Building 2 Room 2,</p>
+  <p>Building 2 - 1st Floor, Room 2,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -784,11 +789,11 @@ elseif ($searchValue == 'B2 R2' || $searchValue == 'Building 2 Room 2') {
 
 } 
 
-elseif ($searchValue == 'B2 R3' || $searchValue == 'Building 2 Room 3') {
+elseif ($searchValue == 'b2 r3' || $searchValue == 'building 2 room 3') {
   
   $text = '
 
-  <p>Building 2 Room 3,</p>
+  <p>Building 2 - 1st Floor, Room 3,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -820,11 +825,11 @@ elseif ($searchValue == 'B2 R3' || $searchValue == 'Building 2 Room 3') {
 
 } 
 
-elseif ($searchValue == 'B2 R4' || $searchValue == 'Building 2 Room 4') {
+elseif ($searchValue == 'b2 r4' || $searchValue == 'building 2 room 4') {
   
   $text = '
 
-  <p>Building 2 Room 4,</p>
+  <p>Building 2 - 2nd Floor, Room 4,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -861,11 +866,11 @@ elseif ($searchValue == 'B2 R4' || $searchValue == 'Building 2 Room 4') {
 
 } 
 
-elseif ($searchValue == 'B2 R5' || $searchValue == 'Building 2 Room 5') {
+elseif ($searchValue == 'b2 r5' || $searchValue == 'building 2 room 5') {
   
   $text = '
 
-  <p>Building 2 Room 5,</p>
+  <p>Building 2 - 2nd Floor, Room 5,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -901,11 +906,11 @@ elseif ($searchValue == 'B2 R5' || $searchValue == 'Building 2 Room 5') {
 
 } 
 
-elseif ($searchValue == 'B2 R6' || $searchValue == 'Building 2 Room 6') {
+elseif ($searchValue == 'b2 r6' || $searchValue == 'building 2 room 6') {
   
   $text = '
 
-  <p>Building 2 Room 6,</p>
+  <p>Building 2 - 2nd Floor, Room 6,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -941,11 +946,11 @@ elseif ($searchValue == 'B2 R6' || $searchValue == 'Building 2 Room 6') {
 
 } 
 
-elseif ($searchValue == 'B2 R7' || $searchValue == 'Building 2 Room 7') {
+elseif ($searchValue == 'b2 r7' || $searchValue == 'building 2 room 7') {
   
   $text = '
 
-  <p>Building 2 Room 7,</p>
+  <p>Building 2 - 3rd Floor, Room 7,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -981,11 +986,11 @@ elseif ($searchValue == 'B2 R7' || $searchValue == 'Building 2 Room 7') {
 
 } 
 
-elseif ($searchValue == 'B2 R8' || $searchValue == 'Building 2 Room 8') {
+elseif ($searchValue == 'b2 r8' || $searchValue == 'building 2 room 8') {
   
   $text = '
 
-  <p>Building 2 Room 8,</p>
+  <p>Building 2 - 3rd Floor, Room 8,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -1021,11 +1026,11 @@ elseif ($searchValue == 'B2 R8' || $searchValue == 'Building 2 Room 8') {
 
 } 
 
-elseif ($searchValue == 'B2 R9' || $searchValue == 'Building 2 Room 9') {
+elseif ($searchValue == 'b2 r9' || $searchValue == 'building 2 room 9') {
   
   $text = '
 
-  <p>Building 2 Room 9,</p>
+  <p>Building 2 - 3rd Floor, Room 9,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -1061,11 +1066,11 @@ elseif ($searchValue == 'B2 R9' || $searchValue == 'Building 2 Room 9') {
 
 } 
 
-elseif ($searchValue == 'B2 R10' || $searchValue == 'Building 2 Room 10') {
+elseif ($searchValue == 'b2 r10' || $searchValue == 'building 2 room 10') {
   
   $text = '
 
-  <p>Building 2 Room 10,</p>
+  <p>Building 2 - 4th Floor, Room 10,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -1101,11 +1106,11 @@ elseif ($searchValue == 'B2 R10' || $searchValue == 'Building 2 Room 10') {
 
 }
 
-elseif ($searchValue == 'B2 R11' || $searchValue == 'Building 2 Room 11') {
+elseif ($searchValue == 'b2 r11' || $searchValue == 'building 2 room 11') {
   
   $text = '
 
-  <p>Building 2 Room 11,</p>
+  <p>Building 2 - 4th Floor, Room 11,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -1141,11 +1146,11 @@ elseif ($searchValue == 'B2 R11' || $searchValue == 'Building 2 Room 11') {
 
 }
 
-elseif ($searchValue == 'B2 R12' || $searchValue == 'Building 2 Room 12') {
+elseif ($searchValue == 'b2 r12' || $searchValue == 'building 2 room 12') {
   
   $text = '
 
-  <p>Building 2 Room 12,</p>
+  <p>Building 2 - 4th Floor, Room 12,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -1180,7 +1185,6 @@ elseif ($searchValue == 'B2 R12' || $searchValue == 'Building 2 Room 12') {
   ;
 
 }
-
 elseif ($searchValue == 'B2 CR1' || $searchValue == 'Building 2 CR1') {
   
   $text = '
@@ -1362,16 +1366,15 @@ elseif ($searchValue == 'B2 CR6' || $searchValue == 'Building 2 CR6') {
 
 } 
 
-elseif ($searchValue == 'B3 R1' || $searchValue == 'Building 3 Room 1') {
-  
+elseif ($searchValue == 'b3 r1' || $searchValue == 'building 3 room 1') {
   $text = '
 
-  <p>Building 3 Room 1,</p>
+  <p>Building 3 - 1st Floor, Room 1</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1382,36 +1385,33 @@ elseif ($searchValue == 'B3 R1' || $searchValue == 'Building 3 Room 1') {
         Estimated Time of Arrival
       </p>
 
-       <!-- Building 3 Room 1 -->
+    <!-- Building 3 - 1st Floor, Room 1 -->
       <script src="astar.js"></script>
       <script>
-         drawMap(
-        0,
+        drawMap(
+          0,
         { x: 22, y: 42 - 1 },
         { x: 11, y: 16 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 1 -->
+    <!-- Building 3 - 1st Floor, Room 1 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R2' || $searchValue == 'Building 3 Room 2') {
-  
+elseif ($searchValue == 'b3 r2' || $searchValue == 'building 3 room 2') {
   $text = '
 
-  <p>Building 3 Room 2,</p>
+  <p>Building 3 - 1st Floor, Room 2</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1422,36 +1422,33 @@ elseif ($searchValue == 'B3 R2' || $searchValue == 'Building 3 Room 2') {
         Estimated Time of Arrival
       </p>
 
-       <!-- Building 3 Room 2 -->
+    <!-- Building 3 - 1st Floor, Room 2 -->
       <script src="astar.js"></script>
       <script>
-         drawMap(
-        0,
+        drawMap(
+          0,
         { x: 22, y: 42 - 1 },
         { x: 14, y: 16 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 2 -->
+    <!-- Building 3 - 1st Floor, Room 2 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R3' || $searchValue == 'Building 3 Room 3') {
-  
+elseif ($searchValue == 'b3 r3' || $searchValue == 'building 3 room 3') {
   $text = '
 
-  <p>Building 3 Room 3,</p>
+  <p>Building 3 - 1st Floor, Room 3</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1462,36 +1459,33 @@ elseif ($searchValue == 'B3 R3' || $searchValue == 'Building 3 Room 3') {
         Estimated Time of Arrival
       </p>
 
-       <!-- Building 3 Room 3 -->
+    <!-- Building 3 - 1st Floor, Room 3 -->
       <script src="astar.js"></script>
       <script>
-         drawMap(
-        0,
+        drawMap(
+          0,
         { x: 22, y: 42 - 1 },
         { x: 16, y: 16 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 3 -->
+    <!-- Building 3 - 1st Floor, Room 3 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R4' || $searchValue == 'Building 3 Room 4') {
-  
+elseif ($searchValue == 'b3 r4' || $searchValue == 'building 3 room 4') {
   $text = '
 
-  <p>Building 3 Room 4,</p>
+  <p>Building 3 - 1st Floor, Room 4</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1502,36 +1496,33 @@ elseif ($searchValue == 'B3 R4' || $searchValue == 'Building 3 Room 4') {
         Estimated Time of Arrival
       </p>
 
-       <!-- Building 3 Room 4 -->
+    <!-- Building 3 - 1st Floor, Room 4 -->
       <script src="astar.js"></script>
       <script>
-         drawMap(
-        0,
+        drawMap(
+          0,
         { x: 22, y: 42 - 1 },
         { x: 19, y: 16 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 4 -->
+    <!-- Building 3 - 1st Floor, Room 4 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R5' || $searchValue == 'Building 3 Room 5') {
-  
+elseif ($searchValue == 'b3 r5' || $searchValue == 'building 3 room 5') {
   $text = '
 
-  <p>Building 3 Room 5,</p>
+  <p>Building 3 - 2nd Floor, Room 5</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1542,36 +1533,33 @@ elseif ($searchValue == 'B3 R5' || $searchValue == 'Building 3 Room 5') {
         Estimated Time of Arrival
       </p>
 
-       <!-- Building 3 Room 5 -->
+    <!-- Building 3 - 2nd Floor, Room 5 -->
       <script src="astar.js"></script>
       <script>
-         drawMap(
-        0,
+        drawMap(
+          0,
         { x: 22, y: 42 - 1 },
-        { x: 11, y: 15 - 8 }
-      )
+        { x: 11, y: 14 - 8 }
+        );
+      
       </script>
-
-      <!-- Building 3 Room 5 -->
+    <!-- Building 3 - 2nd Floor, Room 5 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R6' || $searchValue == 'Building 3 Room 6') {
-  
+elseif ($searchValue == 'b3 r6' || $searchValue == 'building 3 room 6') {
   $text = '
 
-  <p>Building 3 Room 6,</p>
+  <p>Building 3 - 2nd Floor, Room 6</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1582,36 +1570,33 @@ elseif ($searchValue == 'B3 R6' || $searchValue == 'Building 3 Room 6') {
         Estimated Time of Arrival
       </p>
 
-       <!-- Building 3 Room 1 -->
+    <!-- Building 3 - 2nd Floor, Room 6 -->
       <script src="astar.js"></script>
       <script>
-         drawMap(
-        0,
+        drawMap(
+          0,
         { x: 22, y: 42 - 1 },
         { x: 14, y: 14 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 1 -->
+    <!-- Building 3 - 2nd Floor, Room 6 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R7' || $searchValue == 'Building 3 Room 7') {
-  
+elseif ($searchValue == 'b3 r7' || $searchValue == 'building 3 room 7') {
   $text = '
 
-  <p>Building 3 Room 7,</p>
+  <p>Building 3 - 2nd Floor, Room 7</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1622,36 +1607,33 @@ elseif ($searchValue == 'B3 R7' || $searchValue == 'Building 3 Room 7') {
         Estimated Time of Arrival
       </p>
 
-       <!-- Building 3 Room 7 -->
+    <!-- Building 3 - 2nd Floor, Room 7 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
-        0,
+          0,
         { x: 22, y: 42 - 1 },
         { x: 16, y: 14 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 7 -->
+    <!-- Building 3 - 2nd Floor, Room 7 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R8' || $searchValue == 'Building 3 Room 8') {
-  
+elseif ($searchValue == 'b3 r8' || $searchValue == 'building 3 room 8') {
   $text = '
 
-  <p>Building 3 Room 8,</p>
+  <p>Building 3 - 2nd Floor, Room 8</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1662,36 +1644,33 @@ elseif ($searchValue == 'B3 R8' || $searchValue == 'Building 3 Room 8') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 3 Room 8 -->
+    <!-- Building 3 - 2nd Floor, Room 8 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
-        0,
+          0,
         { x: 22, y: 42 - 1 },
         { x: 19, y: 14 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 8 -->
+    <!-- Building 3 - 2nd Floor, Room 8 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R9' || $searchValue == 'Building 3 Room 9') {
-  
+elseif ($searchValue == 'b3 r9' || $searchValue == 'building 3 room 9') {
   $text = '
 
-  <p>Building 3 Room 9,</p>
+  <p>Building 3 - 3rd Floor, Room 9</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1702,36 +1681,33 @@ elseif ($searchValue == 'B3 R9' || $searchValue == 'Building 3 Room 9') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 3 Room 9 -->
+    <!-- Building 3 - 3rd Floor, Room 9 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
-        0,
+          0,
         { x: 22, y: 42 - 1 },
         { x: 11, y: 12 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 9 -->
+    <!-- Building 3 - 3rd Floor, Room 9 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R10' || $searchValue == 'Building 3 Room 10') {
-  
+elseif ($searchValue == 'b3 r10' || $searchValue == 'building 3 room 10') {
   $text = '
 
-  <p>Building 3 Room 10,</p>
+  <p>Building 3 - 3rd Floor, Room 10</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1742,36 +1718,33 @@ elseif ($searchValue == 'B3 R10' || $searchValue == 'Building 3 Room 10') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 3 Room 10 -->
+    <!-- Building 3 - 3rd Floor, Room 10 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
-        0,
+          0,
         { x: 22, y: 42 - 1 },
         { x: 14, y: 12 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 10 -->
+    <!-- Building 3 - 3rd Floor, Room 10 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R11' || $searchValue == 'Building 3 Room 11') {
-  
+elseif ($searchValue == 'b3 r11' || $searchValue == 'building 3 room 11') {
   $text = '
 
-  <p>Building 3 Room 11,</p>
+  <p>Building 3 - 3rd Floor, Room 11</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1782,36 +1755,33 @@ elseif ($searchValue == 'B3 R11' || $searchValue == 'Building 3 Room 11') {
         Estimated Time of Arrival
       </p>
 
-       <!-- Building 3 Room 11 -->
+    <!-- Building 3 - 3rd Floor, Room 11 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
-        0,
+          0,
         { x: 22, y: 42 - 1 },
         { x: 16, y: 12 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 11 -->
+    <!-- Building 3 - 3rd Floor, Room 11 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R12' || $searchValue == 'Building 3 Room 12') {
-  
+elseif ($searchValue == 'b3 r12' || $searchValue == 'building 3 room 12') {
   $text = '
 
-  <p>Building 3 Room 12,</p>
+  <p>Building 3 - 3rd Floor, Room 12</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1822,36 +1792,33 @@ elseif ($searchValue == 'B3 R12' || $searchValue == 'Building 3 Room 12') {
         Estimated Time of Arrival
       </p>
 
-       <!-- Building 3 Room 12 -->
+    <!-- Building 3 - 3rd Floor, Room 12 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
-        0,
+          0,
         { x: 22, y: 42 - 1 },
         { x: 19, y: 12 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 12-->
+    <!-- Building 3 - Floor 3, Room 12 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R13' || $searchValue == 'Building 3 Room 13') {
-  
+elseif ($searchValue == 'b3 r13' || $searchValue == 'building 3 room 13') {
   $text = '
 
-  <p>Building 3 Room 13,</p>
+  <p>Building 3 - 4th Floor, Room 13</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1862,36 +1829,33 @@ elseif ($searchValue == 'B3 R13' || $searchValue == 'Building 3 Room 13') {
         Estimated Time of Arrival
       </p>
 
-       <!-- Building 3 Room 13 -->
+    <!-- Building 3 - 4th Floor, Room 13 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
-        0,
+          0,
         { x: 22, y: 42 - 1 },
         { x: 11, y: 10 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 13 -->
+    <!-- Building 3 - 4th Floor, Room 13 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R14' || $searchValue == 'Building 3 Room 14') {
-  
+elseif ($searchValue == 'b3 r14' || $searchValue == 'building 3 room 14') {
   $text = '
 
-  <p>Building 3 Room 14,</p>
+  <p>Building 3 - 4th Floor, Room 14</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1902,37 +1866,33 @@ elseif ($searchValue == 'B3 R14' || $searchValue == 'Building 3 Room 14') {
         Estimated Time of Arrival
       </p>
 
-       <!-- Building 3 Room 14 -->
+    <!-- Building 3 - 4th Floor, Room 14 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
-        0,
+          0,
         { x: 22, y: 42 - 1 },
         { x: 14, y: 10 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 14 -->
-
+    <!-- Building 3 - 4th Floor, Room 14 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R15' || $searchValue == 'Building 3 Room 15') {
-  
+elseif ($searchValue == 'b3 r15' || $searchValue == 'building 3 room 15') {
   $text = '
 
-  <p>Building 3 Room 15,</p>
+  <p>Building 3 - 4th Floor, Room 15</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1943,37 +1903,33 @@ elseif ($searchValue == 'B3 R15' || $searchValue == 'Building 3 Room 15') {
         Estimated Time of Arrival
       </p>
 
-       <!-- Building 3 Room 15 -->
+    <!-- Building 3 - 4th Floor, Room 15 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
-        0,
+          0,
         { x: 22, y: 42 - 1 },
         { x: 16, y: 10 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 15 -->
-
+    <!-- Building 3 - 4th Floor, Room 15 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B3 R16' || $searchValue == 'Building 3 Room 16') {
-  
+elseif ($searchValue == 'b3 r16' || $searchValue == 'building 3 room 16') {
   $text = '
 
-  <p>Building 3 Room 16,</p>
+  <p>Building 3 - 4th Floor, Room 16</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -1984,26 +1940,23 @@ elseif ($searchValue == 'B3 R16' || $searchValue == 'Building 3 Room 16') {
         Estimated Time of Arrival
       </p>
 
-       <!-- Building 3 Room 16 -->
+    <!-- Building 3 - 4th Floor, Room 16 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
-        0,
+          0,
         { x: 22, y: 42 - 1 },
         { x: 19, y: 10 - 8 }
-      )
+        );
+      
       </script>
-
-      <!-- Building 3 Room 16 -->
-
+    <!-- Building 3 - 4th Floor, Room 16 -->      
 
     </div>
 
     '
-
   ;
-
-} 
+}
 
 elseif ($searchValue == 'B3 CR1' || $searchValue == 'Building 3 CR1') {
   
@@ -2229,11 +2182,11 @@ elseif ($searchValue == 'B3 CR8' || $searchValue == 'Building 3 CR8') {
 
 } 
 
-elseif ($searchValue == 'B4 R1' || $searchValue == 'Building 4 Room 1') {
+elseif ($searchValue == 'b4 r1' || $searchValue == 'building 1 room 1') {
   
   $text = '
 
-  <p>Building 4 Room 1,</p>
+  <p>Building 4 - 1st Floor, Room 1,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -2268,11 +2221,11 @@ elseif ($searchValue == 'B4 R1' || $searchValue == 'Building 4 Room 1') {
 
 } 
 
-elseif ($searchValue == 'Principal Office' || $searchValue == 'PO') {
+elseif ($searchValue == 'principal office' || $searchValue == 'po') {
   
   $text = '
 
-  <p>Principal Office,</p>
+  <p>1st Floor, Principal Office,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -2308,11 +2261,11 @@ elseif ($searchValue == 'Principal Office' || $searchValue == 'PO') {
 
 } 
 
-elseif ($searchValue == 'B4 LRMDS' || $searchValue == 'LRMDS') {
+elseif ($searchValue == 'b4 lrmds' || $searchValue == 'lrmds') {
   
   $text = '
 
-  <p>LMRDS,</p>
+  <p>2nd Floor,LMRDS,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -2348,11 +2301,11 @@ elseif ($searchValue == 'B4 LRMDS' || $searchValue == 'LRMDS') {
 
 } 
 
-elseif ($searchValue == 'B4 R2' || $searchValue == 'Building 4 Room 2') {
+elseif ($searchValue == 'b4 r2' || $searchValue == 'building 4 room 2') {
   
   $text = '
 
-  <p>Building 4 Room 2,</p>
+  <p>Building 4 - 2nd Floor, Room 2,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -2389,11 +2342,11 @@ elseif ($searchValue == 'B4 R2' || $searchValue == 'Building 4 Room 2') {
 
 } 
 
-elseif ($searchValue == 'E-CLASSROOM' || $searchValue == 'E CLASSROOM') {
+elseif ($searchValue == 'e classrom' || $searchValue == 'e-classroom') {
   
   $text = '
 
-  <p>E-CLASSROOM,</p>
+  <p>2n Floor, E-CLASSROOM,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -2430,11 +2383,11 @@ elseif ($searchValue == 'E-CLASSROOM' || $searchValue == 'E CLASSROOM') {
 
 } 
 
-elseif ($searchValue == 'B4 R3' || $searchValue == 'Building 4 Room 3') {
+elseif ($searchValue == 'b4 r3' || $searchValue == 'building 4 room 3') {
   
   $text = '
 
-  <p>Building 4 Room 3,</p>
+  <p>Building 4 - 3rd Floor, Room 3,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -2471,11 +2424,11 @@ elseif ($searchValue == 'B4 R3' || $searchValue == 'Building 4 Room 3') {
 
 } 
 
-elseif ($searchValue == 'B4 R4' || $searchValue == 'Building 4 Room 4') {
+elseif ($searchValue == 'b4 r4' || $searchValue == 'building 4 room 4') {
   
   $text = '
 
-  <p>Building 4 Room 4,</p>
+  <p>Building 4 - 4th Floor, Room 4,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -2512,11 +2465,11 @@ elseif ($searchValue == 'B4 R4' || $searchValue == 'Building 4 Room 4') {
 
 } 
 
-elseif ($searchValue == 'B4 R5' || $searchValue == 'Building 4 Room 5') {
+elseif ($searchValue == 'b4 r5' || $searchValue == 'building 4 room 5') {
   
   $text = '
 
-  <p>Building 4 Room 5,</p>
+  <p>Building 4 - 4th Floor, Room 5,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -2777,11 +2730,11 @@ elseif ($searchValue == 'B5 UC' || $searchValue == 'Building 5 Under Constructio
 
 } 
 
-elseif ($searchValue == 'B6 R1' || $searchValue == 'Building 6 Room 1') {
+elseif ($searchValue == 'b6 r1' || $searchValue == 'building 6 room 1') {
   
   $text = '
 
-  <p>Building 6 Room 1,</p>
+  <p>Building 6 - Floor 1, Room 1,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -2818,11 +2771,11 @@ elseif ($searchValue == 'B6 R1' || $searchValue == 'Building 6 Room 1') {
 
 } 
 
-elseif ($searchValue == 'Library' || $searchValue == 'Lib') {
+elseif ($searchValue == 'library' || $searchValue == 'lib') {
   
   $text = '
 
-  <p>Library,</p>
+  <p>Building 6 - 1st Floor, Library,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -2859,11 +2812,11 @@ elseif ($searchValue == 'Library' || $searchValue == 'Lib') {
 
 }
 
-elseif ($searchValue == 'B6 R2' || $searchValue == 'Building 6 Room 2') {
+elseif ($searchValue == 'b6 r2' || $searchValue == 'building 6 room 2') {
   
   $text = '
 
-  <p>Building 6 Room 2,</p>
+  <p>Building 6 - 1st Floor, Room 2,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -2899,11 +2852,11 @@ elseif ($searchValue == 'B6 R2' || $searchValue == 'Building 6 Room 2') {
 
 }  
 
-elseif ($searchValue == 'B6 R3' || $searchValue == 'Building 6 Room 3') {
+elseif ($searchValue == 'b6 r3' || $searchValue == 'building 6 room 3') {
   
   $text = '
 
-  <p>Building 6 Room 3,</p>
+  <p>Building 6 - 1st Floor, Room 3,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -2939,11 +2892,11 @@ elseif ($searchValue == 'B6 R3' || $searchValue == 'Building 6 Room 3') {
 
 }  
 
-elseif ($searchValue == 'B6 R4' || $searchValue == 'Building 6 Room 4') {
+elseif ($searchValue == 'b6 r4' || $searchValue == 'building 6 room 4') {
   
   $text = '
 
-  <p>Building 6 Room 4,</p>
+  <p>Building 6 - 2nd Floor, Room 4,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -2979,11 +2932,11 @@ elseif ($searchValue == 'B6 R4' || $searchValue == 'Building 6 Room 4') {
 
 }  
 
-elseif ($searchValue == 'Canteen' || $searchValue == 'B6 Canteen') {
+elseif ($searchValue == 'canteen' || $searchValue == 'b6 canteen') {
   
   $text = '
 
-  <p>Canteen,</p>
+  <p>Building 6 - 1st Floor, Canteen,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3007,11 +2960,11 @@ elseif ($searchValue == 'Canteen' || $searchValue == 'B6 Canteen') {
 
 } 
 
-elseif ($searchValue == 'B6 R5' || $searchValue == 'Building 6 Room 5') {
+elseif ($searchValue == 'b6 r5' || $searchValue == 'building 6 room 5') {
   
   $text = '
 
-  <p>Building 6 Room 5,</p>
+  <p>Building 6 - 2nd Floor, Room 5,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3048,11 +3001,11 @@ elseif ($searchValue == 'B6 R5' || $searchValue == 'Building 6 Room 5') {
 
 }  
 
-elseif ($searchValue == 'B6 R6' || $searchValue == 'Building 6 Room 6') {
+elseif ($searchValue == 'b6 r6' || $searchValue == 'building 6 room 6') {
   
   $text = '
 
-  <p>Building 6 Room 6,</p>
+  <p>Building 6 - 2nd Floor, Room 6,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3089,11 +3042,11 @@ elseif ($searchValue == 'B6 R6' || $searchValue == 'Building 6 Room 6') {
 
 } 
 
-elseif ($searchValue == 'B6 R7' || $searchValue == 'Building 6 Room 7') {
+elseif ($searchValue == 'b6 r7' || $searchValue == 'building 6 room 7') {
   
   $text = '
 
-  <p>Building 6 Room 7,</p>
+  <p>Building 6 - 2nd Floor, Room 7,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3129,11 +3082,11 @@ elseif ($searchValue == 'B6 R7' || $searchValue == 'Building 6 Room 7') {
 
 }   
 
-elseif ($searchValue == 'B6 R8' || $searchValue == 'Building 6 Room 8') {
+elseif ($searchValue == 'b6 r8' || $searchValue == 'building 6 room 8') {
   
   $text = '
 
-  <p>Building 6 Room 8,</p>
+  <p>Building 6 - 2nd Floor, Room 8,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3170,11 +3123,11 @@ elseif ($searchValue == 'B6 R8' || $searchValue == 'Building 6 Room 8') {
 
 }  
 
-elseif ($searchValue == 'B6 R9' || $searchValue == 'Building 6 Room 9') {
+elseif ($searchValue == 'b6 r9' || $searchValue == 'building 6 room 9') {
   
   $text = '
 
-  <p>Building 6 Room 9,</p>
+  <p>Building 6 - 3rd Floor, Room 9,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3211,11 +3164,11 @@ elseif ($searchValue == 'B6 R9' || $searchValue == 'Building 6 Room 9') {
 
 }  
 
-elseif ($searchValue == 'B6 R10' || $searchValue == 'Building 6 Room 10') {
+elseif ($searchValue == 'b6 r10' || $searchValue == 'building 6 room 10') {
   
   $text = '
 
-  <p>Building 6 Room 10,</p>
+  <p>Building 6 - 3rd Floor, Room 10,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3252,11 +3205,11 @@ elseif ($searchValue == 'B6 R10' || $searchValue == 'Building 6 Room 10') {
 
 }  
 
-elseif ($searchValue == 'B6 R11' || $searchValue == 'Building 6 Room 11') {
+elseif ($searchValue == 'b6 r11' || $searchValue == 'building 6 room 11') {
   
   $text = '
 
-  <p>Building 6 Room 11,</p>
+  <p>Building 6 - 3rd Floor, Room 11,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3293,11 +3246,11 @@ elseif ($searchValue == 'B6 R11' || $searchValue == 'Building 6 Room 11') {
 
 }  
 
-elseif ($searchValue == 'B6 R12' || $searchValue == 'Building 6 Room 12') {
+elseif ($searchValue == 'b6 r12' || $searchValue == 'building 6 room 12') {
   
   $text = '
 
-  <p>Building 6 Room 12,</p>
+  <p>Building 6 - 3rd Floor, Room 12,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3334,11 +3287,11 @@ elseif ($searchValue == 'B6 R12' || $searchValue == 'Building 6 Room 12') {
 
 }  
 
-elseif ($searchValue == 'B6 R13' || $searchValue == 'Building 6 Room 13') {
+elseif ($searchValue == 'b6 r13' || $searchValue == 'building 6 room 13') {
   
   $text = '
 
-  <p>Building 6 Room 13,</p>
+  <p>Building 6 - 3rd Floor, Room 13,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3374,11 +3327,11 @@ elseif ($searchValue == 'B6 R13' || $searchValue == 'Building 6 Room 13') {
 
 }  
 
-elseif ($searchValue == 'B6 R14' || $searchValue == 'Building 6 Room 14') {
+elseif ($searchValue == 'b6 r14' || $searchValue == 'building 6 room 14') {
   
   $text = '
 
-  <p>Building 6 Room 14,</p>
+  <p>Building 6 - 4th Floor, Room 14,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3414,11 +3367,11 @@ elseif ($searchValue == 'B6 R14' || $searchValue == 'Building 6 Room 14') {
 
 }  
 
-elseif ($searchValue == 'B6 R15' || $searchValue == 'Building 6 Room 15') {
+elseif ($searchValue == 'b6 r15' || $searchValue == 'building 6 room 15') {
   
   $text = '
 
-  <p>Building 6 Room 15,</p>
+  <p>Building 6 - 4th Floor, Room 15,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3455,11 +3408,11 @@ elseif ($searchValue == 'B6 R15' || $searchValue == 'Building 6 Room 15') {
 
 } 
 
-elseif ($searchValue == 'B6 R16' || $searchValue == 'Building 6 Room 16') {
+elseif ($searchValue == 'b6 r16' || $searchValue == 'building 6 room 16') {
   
   $text = '
 
-  <p>Building 6 Room 16,</p>
+  <p>Building 6 - 4th Floor, Room 16,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3496,11 +3449,11 @@ elseif ($searchValue == 'B6 R16' || $searchValue == 'Building 6 Room 16') {
 
 } 
 
-elseif ($searchValue == 'B6 R17' || $searchValue == 'Building 6 Room 17') {
+elseif ($searchValue == 'b6 r17' || $searchValue == 'building 6 room 17') {
   
   $text = '
 
-  <p>Building 6 Room 17,</p>
+  <p>Building 6 - 4th Floor, Room 17,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3537,11 +3490,11 @@ elseif ($searchValue == 'B6 R17' || $searchValue == 'Building 6 Room 17') {
 
 } 
 
-elseif ($searchValue == 'B6 R18' || $searchValue == 'Building 6 Room 18') {
+elseif ($searchValue == 'b6 r18' || $searchValue == 'building 6 room 18') {
   
   $text = '
 
-  <p>Building 6 Room 18,</p>
+  <p>Building 6 - 4th Floor, Room 18,</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -3801,16 +3754,15 @@ elseif ($searchValue == 'B6 CR8' || $searchValue == 'Building 6 CR8') {
 
 } 
 
-elseif ($searchValue == 'B8 R1' || $searchValue == 'Building 8 Room 1') {
-  
+elseif ($searchValue == 'b8 r1' || $searchValue == 'building 8 room 1') {
   $text = '
 
-  <p>Building 8 Room 1,</p>
+  <p>Building 8 - 1st Floor, Room 1</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -3821,37 +3773,33 @@ elseif ($searchValue == 'B8 R1' || $searchValue == 'Building 8 Room 1') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 8 Room 1 -->
+    <!-- Building 8 - 1st Floor, Room 1 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
           0,
           { x: 21, y: 42 - 1 },
           { x: 33, y: 36 - 8 }
-
         );
       
       </script>
-    <!-- Building 8 Room 1  -->
+    <!-- Building 8 - 1st Floor, Room 1 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B8 R2' || $searchValue == 'Building 8 Room 2') {
-  
+elseif ($searchValue == 'b8 r2' || $searchValue == 'building 8 room 2') {
   $text = '
 
-  <p>Building 8 Room 2,</p>
+  <p>Building 8 - 1st Floor, Room 2</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -3862,36 +3810,33 @@ elseif ($searchValue == 'B8 R2' || $searchValue == 'Building 8 Room 2') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 8 Room 2 -->
+    <!-- Building 8 - 1st Floor, Room 2 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
           0,
           { x: 21, y: 42 - 1 },
           { x: 33, y: 40 - 8 }
-
         );
       
       </script>
-    <!-- Building 8 Room 2  -->
+    <!-- Building 8 - 1st Floor, Room 2 -->      
+
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B8 R3' || $searchValue == 'Building 8 Room 3') {
-  
+elseif ($searchValue == 'b8 r3' || $searchValue == 'building 8 room 3') {
   $text = '
 
-  <p>Building 8 Room 3,</p>
+  <p>Building 8 - 1st Floor, Room 3</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -3902,36 +3847,35 @@ elseif ($searchValue == 'B8 R3' || $searchValue == 'Building 8 Room 3') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 8 Room 3 -->
+    <!-- Building 8 - 1st Floor, Room 3 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
           0,
           { x: 21, y: 42 - 1 },
           { x: 33, y: 43 - 8 }
-
         );
       
       </script>
-    <!-- Building 8 Room 3  -->
+    <!-- Building 8 - 1st Floor, Room 3 -->      
+
     </div>
 
     '
-
   ;
+}
 
-} 
 
-elseif ($searchValue == 'B8 R4' || $searchValue == 'Building 8 Room 4') {
-  
+
+elseif ($searchValue == 'b8 r4' || $searchValue == 'building 8 room 4') {
   $text = '
 
-  <p>Building 8 Room 4,</p>
+  <p>Building 8 - 2nd Floor, Room 4</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -3942,37 +3886,33 @@ elseif ($searchValue == 'B8 R4' || $searchValue == 'Building 8 Room 4') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 8 Room 4 -->
+    <!-- Building 8 - 2nd Floor, Room 4 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
           0,
           { x: 21, y: 42 - 1 },
-          { x: 33, y: 36 - 8 }
-
+          { x: 35, y: 36 - 8 }
         );
       
       </script>
-    <!-- Building 8 Room 4  -->
+    <!-- Building 8 - 2nd Floor, Room 4 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B8 R5' || $searchValue == 'Building 8 Room 5') {
-  
+elseif ($searchValue == 'b8 r5' || $searchValue == 'building 8 room 5') {
   $text = '
 
-  <p>Building 8 Room 5,</p>
+  <p>Building 8 - 2nd Floor, Room 5</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -3983,36 +3923,33 @@ elseif ($searchValue == 'B8 R5' || $searchValue == 'Building 8 Room 5') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 8 Room 5 -->
+    <!-- Building 8 - 2nd Floor, Room 5 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
           0,
           { x: 21, y: 42 - 1 },
-          { x: 33, y: 40 - 8 }
-
+          { x: 35, y: 40 - 8 }
         );
       
       </script>
-    <!-- Building 8 Room 5  -->
+    <!-- Building 8 - 2nd Floor, Room 5 -->      
+
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B8 R6' || $searchValue == 'Building 8 Room 6') {
-  
+elseif ($searchValue == 'b8 r6' || $searchValue == 'building 8 room 6') {
   $text = '
 
-  <p>Building 8 Room 6,</p>
+  <p>Building 8 - 2nd Floor, Room 6</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -4023,36 +3960,34 @@ elseif ($searchValue == 'B8 R6' || $searchValue == 'Building 8 Room 6') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 8 Room 6 -->
+    <!-- Building 8 - 2nd Floor, Room 6 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
           0,
           { x: 21, y: 42 - 1 },
-          { x: 33, y: 43 - 8 }
-
+          { x: 35, y: 43 - 8 }
         );
       
       </script>
-    <!-- Building 8 Room 6  -->
+    <!-- Building 8 - 2nd Floor, Room 6 -->      
+
     </div>
 
     '
-
   ;
+}
 
-} 
 
-elseif ($searchValue == 'B8 R7' || $searchValue == 'Building 8 Room 7') {
-  
+elseif ($searchValue == 'b8 r7' || $searchValue == 'building 8 room 7') {
   $text = '
 
-  <p>Building 8 Room 7,</p>
+  <p>Building 8 - 3rd Floor, Room 7</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -4063,37 +3998,33 @@ elseif ($searchValue == 'B8 R7' || $searchValue == 'Building 8 Room 7') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 8 Room 4 -->
+    <!-- Building 8 - 3rd Floor, Room 7 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
           0,
           { x: 21, y: 42 - 1 },
           { x: 37, y: 36 - 8 }
-
         );
       
       </script>
-    <!-- Building 8 Room 4  -->
+    <!-- Building 8 - 3rd Floor, Room 7 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B8 R8' || $searchValue == 'Building 8 Room 8') {
-  
+elseif ($searchValue == 'b8 r8' || $searchValue == 'building 8 room 8') {
   $text = '
 
-  <p>Building 8 Room 8,</p>
+  <p>Building 8 - 3rd Floor, Room 8</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -4104,36 +4035,33 @@ elseif ($searchValue == 'B8 R8' || $searchValue == 'Building 8 Room 8') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 8 Room 8 -->
+    <!-- Building 8 - 3rd Floor, Room 8 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
           0,
           { x: 21, y: 42 - 1 },
           { x: 37, y: 40 - 8 }
-
         );
       
       </script>
-    <!-- Building 8 Room 8  -->
+    <!-- Building 8 - 3rd Floor, Room 8 -->      
+
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B8 R9' || $searchValue == 'Building 8 Room 9') {
-  
+elseif ($searchValue == 'b8 r9' || $searchValue == 'building 8 room 9') {
   $text = '
 
-  <p>Building 8 Room 9,</p>
+  <p>Building 8 - 3rd Floor, Room 9</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -4144,36 +4072,35 @@ elseif ($searchValue == 'B8 R9' || $searchValue == 'Building 8 Room 9') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 8 Room 9 -->
+    <!-- Building 8 - 3rd Floor, Room 9 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
           0,
           { x: 21, y: 42 - 1 },
           { x: 37, y: 43 - 8 }
-
         );
       
       </script>
-    <!-- Building 8 Room 9  -->
+    <!-- Building 8 - 3rd Floor, Room 9 -->      
+
     </div>
 
     '
-
   ;
+}
 
-} 
 
-elseif ($searchValue == 'B8 R10' || $searchValue == 'Building 8 Room 10') {
-  
+
+elseif ($searchValue == 'b8 r10' || $searchValue == 'building 8 room 10') {
   $text = '
 
-  <p>Building 8 Room 10,</p>
+  <p>Building 8 - 4th Floor, Room 10</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -4184,37 +4111,33 @@ elseif ($searchValue == 'B8 R10' || $searchValue == 'Building 8 Room 10') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 8 Room 10 -->
+    <!-- Building 8 - 4th Floor, Room 10 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
           0,
           { x: 21, y: 42 - 1 },
           { x: 39, y: 36 - 8 }
-
         );
       
       </script>
-    <!-- Building 8 Room 10  -->
+    <!-- Building 8 - 4th Floor, Room 10 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B8 R11' || $searchValue == 'Building 8 Room 11') {
-  
+elseif ($searchValue == 'b8 r11' || $searchValue == 'building 8 room 11') {
   $text = '
 
-  <p>Building 8 Room 11,</p>
+  <p>Building 8 - 4th Floor, Room 11</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -4225,37 +4148,33 @@ elseif ($searchValue == 'B8 R11' || $searchValue == 'Building 8 Room 11') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 8 Room 11 -->
+    <!-- Building 8 - 4th Floor, Room 11 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
           0,
           { x: 21, y: 42 - 1 },
           { x: 39, y: 40 - 8 }
-
         );
       
       </script>
-    <!-- Building 8 Room 11  -->
+    <!-- Building 8 - 4th Floor, Room 14 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
-
-elseif ($searchValue == 'B8 R12' || $searchValue == 'Building 8 Room 12') {
-  
+elseif ($searchValue == 'b8 r12' || $searchValue == 'building 8 room 12') {
   $text = '
 
-  <p>Building 8 Room 12,</p>
+  <p>Building 8 - 4th Floor, Room 12</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
       
-      <img src="assets/img/map.svg" class="img-fluid" style="width="40vh">
+      <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
           <span id="seconds"></span> 
@@ -4266,26 +4185,24 @@ elseif ($searchValue == 'B8 R12' || $searchValue == 'Building 8 Room 12') {
         Estimated Time of Arrival
       </p>
 
-      <!-- Building 8 Room 12 -->
+    <!-- Building 8 - 4th Floor, Room 12 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
           0,
           { x: 21, y: 42 - 1 },
           { x: 39, y: 43 - 8 }
-
         );
       
       </script>
-     <!-- Building 8 Room 12  -->
+    <!-- Building 8 - 4th Floor, Room 12 -->      
 
     </div>
 
     '
-
   ;
+}
 
-} 
 
 elseif ($searchValue == 'B7 IPP Room' || $searchValue == 'Building 7 IPP Room') {
   
@@ -4555,7 +4472,7 @@ elseif ($searchValue == 'B8 CR8' || $searchValue == 'Building 8 CR8') {
 }
 // Ammenities
 
-elseif ($searchValue == 'Gulayan sa Paaralan' || $searchValue == 'Gulayan') {
+elseif ($searchValue == 'gulayan sa paaralan' || $searchValue == 'gulayan') {
   
   $text = '
 
@@ -4597,7 +4514,7 @@ elseif ($searchValue == 'Gulayan sa Paaralan' || $searchValue == 'Gulayan') {
 
 }
 
-elseif ($searchValue == 'Wash Area' || $searchValue == 'Wash') {
+elseif ($searchValue == 'wash Area' || $searchValue == 'wash') {
   
   $text = '
 
@@ -4637,7 +4554,7 @@ elseif ($searchValue == 'Wash Area' || $searchValue == 'Wash') {
 
 }
 
-elseif ($searchValue == 'Covered Court' || $searchValue == 'Court') {
+elseif ($searchValue == 'covered court' || $searchValue == 'court') {
   
   $text = '
 
@@ -4676,7 +4593,7 @@ elseif ($searchValue == 'Covered Court' || $searchValue == 'Court') {
 
 }
 
-elseif ($searchValue == 'Holding Area' || $searchValue == 'Hold') {
+elseif ($searchValue == 'holding area' || $searchValue == 'hold') {
   
   $text = '
 
@@ -4716,7 +4633,7 @@ elseif ($searchValue == 'Holding Area' || $searchValue == 'Hold') {
 
 }
 
-elseif ($searchValue == 'Mini Forest' || $searchValue == 'Forest') {
+elseif ($searchValue == 'mini forest' || $searchValue == 'forest') {
   
   $text = '
 
@@ -4756,7 +4673,7 @@ elseif ($searchValue == 'Mini Forest' || $searchValue == 'Forest') {
 
 }
 
-elseif ($searchValue == 'Information Desk' || $searchValue == 'Desk') {
+elseif ($searchValue == 'information desk' || $searchValue == 'desk') {
   
   $text = '
 
@@ -4797,7 +4714,7 @@ elseif ($searchValue == 'Information Desk' || $searchValue == 'Desk') {
 
 }
 
-elseif ($searchValue == 'Flag Pole' || $searchValue == 'Flag') {
+elseif ($searchValue == 'flag pole' || $searchValue == 'flag') {
   
   $text = '
 
