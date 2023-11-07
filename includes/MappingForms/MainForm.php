@@ -37,12 +37,11 @@
 
                 <div class="text-center py-8 mt-6">
                     <h1 class="text-start lg:text-start font-bold text-3xl sm:text-4xl leading-none">
-				              Welcome, Student, have a great day ahead.
+                      Welcome, student. We hope to be at your service.
 			              </h1>                    
                 </div>
 
                 <div class="relative mt-6" data-toggle="tooltip" data-placement="top" title="e.g. Building 1 Room 1 / B1 R1">
-                    <form>   
                         <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                         <div class="relative">
                             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -50,17 +49,16 @@
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                                 </svg>
                             </div>
-                            <input type="text" id="searchInput" onkeyup="search()" class="block w-full p-2 pl-10 text-sm text-gray-900 border-1 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Search" required>
+                            <input type="text" id="searchInput" onkeyup="search()" class="block w-full p-2 pl-10 text-sm text-gray-800 border-2 border-slate-300 hover:border-slate-400 rounded-lg focus:ring-gray-300 focus:border-gray-200" placeholder="Search" required>
                         </div>
-                    </form>                  
 
                   <!-- Buttons -->
                   <div class="text-center pt-4 flex justify-evenly">
-                    <button type="button" onclick="removeRestroomQueryParam()" class="text-gray-900 bg-white w-1/2 border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+                    <button type="button" onclick="removeRestroomQueryParam()" class="text-gray-900 bg-white w-screen border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
                       Canteen
                     </button>
                     
-                    <button type="button" onclick="addRestroomQueryParam()" class="text-gray-900 bg-white w-1/2  border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+                    <button type="button" onclick="addRestroomQueryParam()" class="text-gray-900 bg-white w-screen border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
                       Restroom(s)
                     </button>
                   </div>                    

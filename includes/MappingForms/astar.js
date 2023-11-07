@@ -5,9 +5,9 @@ const data = {
       size: 512,
       blockSize: 12,
       map: [
-        "mapping/chuchumap.jpg",
-        "mapping/Restroom.jpg",
-        "mapping/Canteen.jpg",
+        "assets/chuchumap.jpg",
+        "assets/Restroom.jpg",
+        "assets/Canteen.jpg",
       ],
       debug: false,
       obstacles: [

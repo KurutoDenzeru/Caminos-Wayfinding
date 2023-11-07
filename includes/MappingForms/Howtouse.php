@@ -3,7 +3,7 @@
     <hr />
 </div>
 
-<p class="text-md text-start pt-6" data-modal-target="popup-modal" data-modal-toggle="popup-modal" style="cursor:pointer;">
+<p class="text-lg text-start pt-6" data-modal-target="popup-modal" data-modal-toggle="popup-modal" style="cursor:pointer;">
     How to use?
 </p>
 
