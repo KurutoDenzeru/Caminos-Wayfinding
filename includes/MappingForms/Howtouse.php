@@ -34,9 +34,8 @@
                 <h3 class="text-lg text-start font-extrabold text-gray-900">Legends:</h3>
                 <div class="py-3">
                     <p class="text-md">
-                    1. Search for your desired destination (e.g., Building 1, Room 1 / B1 R1) <br>
-                    2. An updated map picture will pop up to guide you to your desired location. <br>
-                    3. Enjoy the rest of the system schematics that will navigate you through the entire school.
+                    1. Green Line - Main path. <br>
+                    2. Red Line - Alternative path (If there is available alternative route to your destination). <br>
                     </p> 
                 </div>                               
                 <!-- Buttons -->

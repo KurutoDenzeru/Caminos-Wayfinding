@@ -87,4 +87,39 @@
   </div>
 </section>
 
+<!-- Fetch Script -->
+<script>
+      const img = new Image
+      img.src = (window.location.href.includes('?restroom')) ? "mapping/Restroom.jpg" : "mapping/chuchumap.jpg"
+
+      img.onload = () => {
+        let element = document.getElementById('myCanvas')
+        ctx = element.getContext('2d')
+        element.width = 512
+        element.height = 512
+        ctx.drawImage(img, 0, 0, 512, 512)
+      }
+
+      function addRestroomQueryParam() {
+        const currentUrl = window.location.href;
+        const hasRestroomQueryParam = currentUrl.includes('?restroom');
+
+        if (!hasRestroomQueryParam) {
+          const updatedUrl = currentUrl + '?restroom';
+          window.history.replaceState(null, '', updatedUrl);
+        }
+
+        search()
+      }
+
+      function removeRestroomQueryParam() {
+        const currentUrl = window.location.href;
+        const updatedUrl = currentUrl.replace('?restroom', '');
+
+        window.history.replaceState(null, '', updatedUrl);
+
+        search()
+      }
+    </script>
+
 </body>
