@@ -30,7 +30,7 @@
           <div class="g-0 lg:flex lg:flex-wrap">
             <!-- Left column container-->
             <div class="px-14 py-6 shadow-2xl md:px-0 lg:w-4/12">
-              <div class="md:mx-6 md:p-14">
+              <div class="md:mx-6 md:p-14 mx-auto">
 
                 <?php 
 
@@ -38,8 +38,8 @@
                 
                 ?>       
 
-                <div class="text-center py-14">
-                    <img src="../../assets/img/caminoslogo.png" class="mx-auto w-48 sm:w-32">                                  
+                <div class="text-center py-8">
+                    <img src="../../assets/img/caminoslogo.png" class="mx-auto w-48 md:w-32 sm:w-24">                                  
                 </div>
 
                 <div class="relative mt-6" data-toggle="tooltip" data-placement="top" title="e.g. Building 1 Room 1 / B1 R1">
