@@ -14,11 +14,9 @@ $searchValue = strtolower($searchValue);
 if ($searchValue == 'b1 r1' || $searchValue == 'building 1 room 1') {
   $text = '
 
-  <p>Building 1 - 1st Floor, Room 1</p>
-  
+  <p>Building 1 - 1st Floor, Room 1</p>  
   <div class="row" style="background-color: white; border-radius: 15px">
-    <div class="col-sm">
-      
+    <div class="col-sm">      
       <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
@@ -30,7 +28,6 @@ if ($searchValue == 'b1 r1' || $searchValue == 'building 1 room 1') {
         Estimated Time of Arrival
       </p>
 
-    <!-- Building 1 Room 1 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
