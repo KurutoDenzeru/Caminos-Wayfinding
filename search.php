@@ -14,9 +14,11 @@ $searchValue = strtolower($searchValue);
 if ($searchValue == 'b1 r1' || $searchValue == 'building 1 room 1') {
   $text = '
 
-  <p>Building 1 - 1st Floor, Room 1</p>  
+  <p>Building 1 - 1st Floor, Room 1</p>
+  
   <div class="row" style="background-color: white; border-radius: 15px">
-    <div class="col-sm">      
+    <div class="col-sm">
+      
       <img src="assets/img/map.svg" class="img-fluid py-2" style="width="40vh">
       <span>
         <p style="color: red; font-weight: 900">
@@ -28,6 +30,7 @@ if ($searchValue == 'b1 r1' || $searchValue == 'building 1 room 1') {
         Estimated Time of Arrival
       </p>
 
+    <!-- Building 1 Room 1 -->
       <script src="astar.js"></script>
       <script>
         drawMap(
@@ -2466,7 +2469,7 @@ elseif ($searchValue == 'b4 r5' || $searchValue == 'building 4 room 5') {
   
   $text = '
 
-  <p>Building 4 - 4th Floor, Room 5,</p>
+  <p>Building 4 - 4th Floor, Room 5</p>
   
   <div class="row" style="background-color: white; border-radius: 15px">
     <div class="col-sm">
@@ -4201,7 +4204,7 @@ elseif ($searchValue == 'b8 r12' || $searchValue == 'building 8 room 12') {
 }
 
 
-elseif ($searchValue == 'B7 IPP Room' || $searchValue == 'Building 7 IPP Room') {
+elseif ($searchValue == 'b7 ipp room' || $searchValue == 'building 7 ipp room') {
   
   $text = '
 
@@ -4244,7 +4247,7 @@ elseif ($searchValue == 'B7 IPP Room' || $searchValue == 'Building 7 IPP Room') 
 
 } 
 
-elseif ($searchValue == 'B8 CR1' || $searchValue == 'Building 8 CR1') {
+elseif ($searchValue == 'b6 cr1' || $searchValue == 'building 6 cr1') {
   
   $text = '
 

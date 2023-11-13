@@ -5,6 +5,22 @@
 
 ?>
 
+<!-- Asynchronous Request of Estimated Time of Arrival / ETA -->
+<script>
+  function search() {
+    var searchValue = $('#searchInput').val();
+    // Make an AJAX request to a PHP script
+    $.ajax({
+      url: 'search.php', // Replace with the actual URL for your search functionality
+      type: 'POST',
+      data: { searchValue: searchText },
+      success: function(response) {
+        $('#searchResult').html(response);
+      }
+    });
+  }
+</script> 
+
 <head>
     <title>ABES - Mapping System</title>
     <link rel="icon" type="text/css" href="../../assets/img/favicon.png">
@@ -49,7 +65,11 @@
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                                 </svg>
                             </div>
-                            <input type="text" id="searchInput" onkeyup="search()" class="block w-full p-2 pl-10 text-sm text-gray-800 border-2 border-slate-300 hover:border-slate-400 rounded-lg focus:ring-gray-300 focus:border-gray-200" placeholder="Search" required>
+                            <!-- Search Function -->
+                            <input type="text" id="searchInput" class="block w-full p-2 pl-10 text-sm text-gray-800 border-2 border-slate-300 hover:border-slate-400 rounded-lg focus:ring-gray-300 focus:border-gray-200" placeholder="Search" required>
+                            <button id="searchButton" onclick="performSearch()" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">
+                              Search
+                            </button>
                         </div>
 
                   <!-- Buttons -->
@@ -89,37 +109,57 @@
 
 <!-- Fetching Script -->
 <script>
-      const img = new Image
-      img.src = (window.location.href.includes('?restroom')) ? "mapping/Restroom.jpg" : "mapping/chuchumap.jpg"
+      function refreshImage(){
+        const img = new Image
+        img.src = (window.location.href.includes('?restroom')) ? "mapping/Restrooms.jpg" : (window.location.href.includes('?canteen')) ? "mapping/Canteens.jpg" : "mapping/chuchumap3.jpg"
 
-      img.onload = () => {
-        let element = document.getElementById('myCanvas')
-        ctx = element.getContext('2d')
-        element.width = 512
-        element.height = 512
-        ctx.drawImage(img, 0, 0, 512, 512)
+        img.onload = () => {
+          let element = document.getElementById('myCanvas')
+          ctx = element.getContext('2d')
+          element.width = 512
+          element.height = 512
+          ctx.drawImage(img, 0, 0, 512, 512)
+        }
       }
 
-      function addRestroomQueryParam() {
-        const currentUrl = window.location.href;
-        const hasRestroomQueryParam = currentUrl.includes('?restroom');
+      refreshImage()
 
-        if (!hasRestroomQueryParam) {
-          const updatedUrl = currentUrl + '?restroom';
+      function addRestroomQueryParam() {
+        removeAllQueryParam()
+
+        const currentUrl = window.location.href;
+        const updatedUrl = currentUrl + '?restroom';
+        window.history.replaceState(null, '', updatedUrl);
+
+        refreshImage()
+        if(endPosLog) endPosLog = []
+      }
+
+      function addCanteenQueryParam() {
+        removeAllQueryParam()
+        
+        const currentUrl = window.location.href;
+        const updatedUrl = currentUrl + '?canteen';
+        window.history.replaceState(null, '', updatedUrl);
+
+        refreshImage()
+        if(endPosLog) endPosLog = []
+      }
+
+      function removeAllQueryParam() {
+        const currentUrl = window.location.href;
+
+        if (currentUrl.includes('?restroom')) {
+          const updatedUrl = currentUrl.replace('?restroom', '');
           window.history.replaceState(null, '', updatedUrl);
         }
 
-        search()
-      }
-
-      function removeRestroomQueryParam() {
-        const currentUrl = window.location.href;
-        const updatedUrl = currentUrl.replace('?restroom', '');
-
-        window.history.replaceState(null, '', updatedUrl);
-
-        search()
+        if (currentUrl.includes('?canteen')) {
+          const updatedUrl = currentUrl.replace('?canteen', '');
+          window.history.replaceState(null, '', updatedUrl);
+        }
       }
     </script>
-
 </body>
+
+</html>
