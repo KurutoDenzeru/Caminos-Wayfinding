@@ -3,11 +3,6 @@ ABES Wayfinding system website is designed to help students, parents, and visito
 
 <br>
 
-# 📄 Additonal Description
-In addition to the interactive map, the website also provides important information about the school, such as its history, mission statement, and upcoming events. This can be especially helpful for new students and their families who may be unfamiliar with the school. The website also includes contact information for key staff members, making it easy to get in touch with teachers, counselors, and administrators. Another important feature of the elementary school wayfinding system website is that it is accessible from any device with an internet connection. This means that users can access the website on their smartphones, tablets, or computers, making it even more convenient to use. The website is also designed with user-friendliness in mind, with a simple and intuitive interface that is easy to navigate.
-
-<br>
-
 # ⚙ Features of the System
 The following are the main features of the system based on the guidelines given to the developers:
 
