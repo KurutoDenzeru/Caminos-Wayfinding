@@ -6,11 +6,9 @@ ABES Wayfinding system website is designed to help students, parents, and visito
 # ⚙ Features of the System
 The following are the main features of the system based on the guidelines given to the developers:
 
-- Interactive Map: The website provides an interactive map of the school, highlighting important areas such as classrooms, restrooms, cafeteria, and administrative offices. Users can easily click on each location to view more information and receive step-by-step directions.
-- Step-by-step directions: Users can search for specific locations and receive step-by-step directions on how to get there.
-- Important information: The system provides important information about the school, such as its history, mission statement, and upcoming events.
-- Contact information: The system includes contact information for key staff members, making it easy to get in touch with teachers, counselors, and administrators.
-- Accessibility: The system is accessible from any device with an internet connection, such as smartphones, tablets, or computers. It is designed with user-friend liness in mind, with a simple and intuitive interface that is easy to navigate.
+- Interactive Map: Easily explore the school layout, find classrooms, restrooms, cafeteria, and offices, with click-to-view details and directions.
+- Step-by-step Directions: Search and receive precise directions to any location within the school.
+- Accessibility: Accessible from any device with internet, featuring a user-friendly interface for seamless navigation.
 
 <br>
 
