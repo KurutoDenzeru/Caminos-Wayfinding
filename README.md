@@ -12,34 +12,6 @@ The following are the main features of the system based on the guidelines given 
 
 <br>
 
-# 🎢 Compiling
-Compiling requires using cross-platform web server solution stack package or newer. XAMPP, WampServer, MAMP and etcetera... are known to work for compiling Caminos.
-
-Your solution stack software should run the modules of ```Apache``` & ```MySQL```, with their services of ```PID(s)``` & ```Port(s)``` having their respective numbers.
-
-Simply check your cli/audit logs below from your software for Caminos:
-
-```txt
-  [Apache] 	Attempting to start Apache app...
-  [Apache] 	Status change detected: running
-  [mysql] 	Attempting to start MySQL app...
-  [mysql] 	Status change detected: running
-```
-To test Caminos itself, firstly, we have to extract or place it within where is your Solution stack software is installed. After knowing the location that depends on the letters of your drive e.g. ```Drive for Work(C:)```, navigate to its repositories like this:
-```txt
-  [xampp] -> [htdocs] -> [Folder name of the System]
-```
-
-<br >
-Additionally, be sure to also extract our included <code>.sql</code> file, and import it within <code>http://localhost/phpmyadmin/</code>.
-
-<br>
-<br>
-Testing out the system just requires a modern browser of your choice, and entering the url <code>http://localhost/Folder name of the system</code>.
-
-<br>
-<br>
-
 # 🌎 Copyright
 Caminos is Copyright © 2022 – onwards Kurt Calacday. It is distributed under the <a href="https://opensource.org/licenses/MIT">MIT License</a> A copy of the license is available in the distributed LICENSE file.
 
